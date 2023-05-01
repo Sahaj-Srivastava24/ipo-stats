@@ -1,0 +1,52 @@
+import Logo from "components/components/logo";
+import {DM_Sans} from "next/font/google";
+import {Input} from "@nextui-org/react";
+import SearchButton from "components/components/search_button";
+
+
+const dm_sans = DM_Sans({
+  weight: '700',
+  subsets: ['latin']
+})
+
+export default function LandingView() {
+
+
+  return (
+    <>
+      <div className="flex justify-between items-center px-[30px] py-[40px] md:px-[85px] md:py-[75px] lg:px-[160px] lg:py-[65px]">
+        <Logo />
+        <Logo />
+      </div>
+
+      <div className="mt-[100px] flex gap-[20%] justify-between">
+        <div className="ml-[80px] flex flex-col gap-30">
+          <div className="flex flex-col gap-[10px]">
+            <div className="uppercase text-[#777E90] font-[700] text-[16px] leading-[16px]">
+              Save your time with Stonks
+            </div>
+            <div className={`text-[64px] leading-[64px] text-[#23262F] font-[700] ${dm_sans.className}`}>
+              India’s first IPO platform
+            </div>
+            <div className="text-[#777E90] text-[16px] leading-[24px] font-[400] mt-10">
+              Exclusive IPO data platform
+            </div>
+          </div>
+
+          <div className="mt-50">
+            <Input
+              rounded
+              bordered
+              placeholder="Search a company"
+              color="default"
+              contentRight={
+                <SearchButton />
+              }
+            />
+          </div>
+        </div>
+        <div className="h-[450px] w-[40%] bg-[#45B26B] rounded-l-[32px]"></div>
+      </div>
+    </>
+  )
+}

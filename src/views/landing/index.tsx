@@ -13,14 +13,14 @@ export default function LandingView() {
 
 
   return (
-    <>
+    <div className="pb-[140px]">
       <div className="flex justify-between items-center px-[30px] py-[40px] md:px-[85px] md:py-[75px] lg:px-[160px] lg:py-[65px]">
         <Logo />
         <Logo />
       </div>
 
       <div className="mt-[100px] flex gap-[20%] justify-between">
-        <div className="ml-[80px] flex flex-col gap-30">
+        <div className="ml-[80px] flex flex-col gap-30 justify-around">
           <div className="flex flex-col gap-[10px]">
             <div className="uppercase text-[#777E90] font-[700] text-[16px] leading-[16px]">
               Save your time with Stonks
@@ -33,7 +33,7 @@ export default function LandingView() {
             </div>
           </div>
 
-          <div className="mt-50">
+          <div>
             <Input
               rounded
               bordered
@@ -47,6 +47,6 @@ export default function LandingView() {
         </div>
         <div className="h-[450px] w-[40%] bg-[#45B26B] rounded-l-[32px]"></div>
       </div>
-    </>
+    </div>
   )
 }

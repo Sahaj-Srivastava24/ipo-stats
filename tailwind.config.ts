@@ -169,15 +169,8 @@ module.exports = {
         CEDEDED: '#EDEDED',
       },
       lineHeight: {
-        10: '10px',
-        12: '12px',
-        14: '14px',
-        15: '15px',
-        16: '16px',
-        18: '18px',
-        22: '22px',
-        28: '28px',
-        30: '30px',
+        24: '24px',
+        64: '64px',
       },
       borderRadius: {
         3: '3px',

@@ -34,6 +34,7 @@ export default function LandingView() {
               bordered
               placeholder="Search a company"
               color="default"
+              css={{'&:active': {border: '1px solid #777E90'}}}
               contentRight={
                 <SearchButton />
               }

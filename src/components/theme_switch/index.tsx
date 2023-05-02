@@ -12,6 +12,7 @@ export default function ThemeSwitch() {
 
   return (
     <Switch
+      color='secondary'
       checked={isDark}
       iconOff={<SunIcon filled />}
       iconOn={<MoonIcon filled />}

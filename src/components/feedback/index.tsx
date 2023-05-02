@@ -54,30 +54,30 @@ export default function Feedback() {
         </div>
         <div className="flex gap-[20px]">
           <Radio.Group orientation="horizontal" size="sm" label={<Label text='Was the information on the website helpful in understanding the IPO process?' />} >
-            <Radio value="primary" color="primary">
+            <Radio value="yes" color="secondary">
               Yes
             </Radio>
-            <Radio value="secondary" color="secondary">
+            <Radio value="no" color="secondary">
               No
             </Radio>
           </Radio.Group>
         </div>
         <div className="flex gap-[20px]">
           <Radio.Group orientation="horizontal" size="sm" label={<Label text="Did you find the website's design appealing and user-friendly?" />}>
-            <Radio value="primary" color="primary">
+            <Radio value="yes" color="secondary">
               Yes
             </Radio>
-            <Radio value="secondary" color="secondary">
+            <Radio value="no" color="secondary">
               No
             </Radio>
           </Radio.Group>
         </div>
         <div className="flex gap-[20px]">
           <Radio.Group orientation="horizontal" size="sm" label={<Label text="Were you able to easily find the details of the current and upcoming IPOs on the website?" />}>
-            <Radio value="primary" color="primary">
+            <Radio value="yes" color="secondary">
               Yes
             </Radio>
-            <Radio value="secondary" color="secondary" >
+            <Radio value="no" color="secondary" >
               No
             </Radio>
           </Radio.Group>

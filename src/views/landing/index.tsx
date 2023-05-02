@@ -1,7 +1,8 @@
 import Logo from "components/components/logo";
 import {DM_Sans} from "next/font/google";
-import {Input} from "@nextui-org/react";
+import {Input, Text} from "@nextui-org/react";
 import SearchButton from "components/components/search_button";
+import ThemeSwitch from "components/components/theme_switch";
 
 
 const dm_sans = DM_Sans({
@@ -11,26 +12,25 @@ const dm_sans = DM_Sans({
 
 export default function LandingView() {
 
-
   return (
     <div className="pb-[140px]">
       <div className="flex justify-between items-center px-[30px] py-[40px] md:px-[85px] md:py-[75px] lg:px-[160px] lg:py-[65px]">
         <Logo />
-        <Logo />
+        <ThemeSwitch />
       </div>
 
       <div className="mt-[100px] flex gap-[20%] justify-between">
         <div className="ml-[80px] flex flex-col gap-30 justify-around">
           <div className="flex flex-col gap-[10px]">
-            <div className="uppercase text-[#777E90] font-[700] text-[16px] leading-[16px]">
+            <Text className="uppercase font-[700] text-[16px] leading-[16px]" css={{color: '$textLight'}}>
               Save your time with Stonks
-            </div>
-            <div className={`text-[64px] leading-[64px] text-[#23262F] font-[700] ${dm_sans.className}`}>
+            </Text>
+            <Text className={`text-[64px] leading-[64px] font-[700] ${dm_sans.className}`} css={{color: '$textDark'}}>
               India’s first IPO platform
-            </div>
-            <div className="text-[#777E90] text-[16px] leading-[24px] font-[400] mt-10">
+            </Text>
+            <Text className="text-[16px] leading-[24px] font-[400] mt-10" css={{color: '$textLight'}}>
               Exclusive IPO data platform
-            </div>
+            </Text>
           </div>
 
           <div>

@@ -7,14 +7,14 @@ export default function Footer() {
 
   return (
     <div className="mx-[80px]">
-      <div className="mt-[100px] border-b-2 border-[#E6E8EC] pb-10">
+      <div className="mt-[100px] border-b-2 border-footerDiv pb-10">
         <div className="flex justify-between mb-[40px]">
           <div className="flex gap-[10px]">
             <Logo />
             <div className="min-h-[98%] w-[1px] bg-[#E6E8EC]" />
-            <div className="text-[#23262F] leading-24 text-14 flex items-center">
+            <Text className="leading-24 text-14 flex items-center" css={{color: '$textLight'}}>
               Save your time with Stonks
-            </div>
+            </Text>
           </div>
           <div className="flex gap-[20px] items-center">
             <Link href={ROUTES.PRIVACY} className="text-[#777E90] text-[14px]">

@@ -1,8 +1,11 @@
+import {Container} from "@nextui-org/react";
 
 export default function IPOCard() {
 
   return (
-    <div className="bg-[#FFFFFF] rounded-20 pt-[80px] pb-50 hover:transition-[box-shadow] hover:duration-[200ms] hover:shadow-[0px_64px_64px_-48px_rgba(15,15,15,0.1)]">
+    <Container
+      css={{bg: '$ipoCardBackground'}}
+      className="rounded-20 pt-[80px] pb-50 hover:transition-[box-shadow] hover:duration-[200ms] hover:shadow-[0px_64px_64px_-48px_rgba(15,15,15,0.1)]">
       <div className="flex flex-cols justify-center items-center mb-30">
         <svg width="81" height="80" viewBox="0 0 81 80" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="40.5" cy="40" r="40" fill="#EF466F" />
@@ -17,6 +20,6 @@ export default function IPOCard() {
         We realize ideas from simple to complex, everything becomes easy to use and reach the most potential customers.
         We realize ideas from simple to complex, everything becomes easy to use and reach the most potential customers.
       </div>
-    </div>
+    </Container>
   )
 }

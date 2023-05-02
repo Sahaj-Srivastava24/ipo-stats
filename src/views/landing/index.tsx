@@ -14,7 +14,7 @@ export default function LandingView() {
     <div className="pb-[80px] md:pb-[140px]">
       <Header />
       <div className="mt-[100px] flex flex-col md:flex-row gap-[20%] justify-between">
-        <div className="mx-[20px] mb-[40px] md:ml-[80px] flex flex-col gap-[30px] justify-around">
+        <div className="mx-[20px] mb-[40px] md:ml-[120px] flex flex-col gap-[30px] justify-around">
           <div className="flex flex-col gap-[10px]">
             <Text className="text-center md:text-left uppercase font-[700] text-[12px] md:text-[16px] leading-[12px] md:leading-[16px]" css={{color: '$textLight'}}>
               Save your time with Stonks

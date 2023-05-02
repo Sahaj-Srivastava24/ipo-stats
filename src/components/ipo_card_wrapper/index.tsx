@@ -13,9 +13,7 @@ export default function IPOCardWrapper(props: {heading: string, data?: any[]}) {
   return (
     <div className="py-20">
       <div className="flex flex-col items-center justify-center mx-30 pb-[20px] md:pt-[50px] md:pb-[100px]">
-        <Text className={`${dm_sans.className} text-[48px] leading-[56px] text-center `} css={{color: '$textDark'}}>
-          {props.heading}
-        </Text>
+        <Text className={`text-center md:text-left text-[30px] md:text-[64px] leading-[30px] md:leading-[64px] font-[700] ${dm_sans.className}`} css={{color: '$textDark'}}>{props.heading}</Text>
         <Text className="text-[16px] leading-[24px] text-center " css={{color: '$textLight'}}>
           Stonks is a production-ready library of stackable content blocks built in React Native.
         </Text>

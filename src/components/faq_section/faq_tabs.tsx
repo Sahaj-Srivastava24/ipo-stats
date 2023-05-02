@@ -50,7 +50,7 @@ export default function FAQTabs(props: {tab: number, setTab: (idx: number) => vo
       </div>
       <div className="md:hidden pb-10 border-b-[1px] border-CE6E8EC mb-20">
         <Dropdown>
-          <Dropdown.Button flat css={{tt: "capitalize", w: '100%', display: 'flex', justifyContent: 'space-between', color: 'black', p: '0.75rem', mb: '20px', border: '1px solid #E6E8EC'}}>
+          <Dropdown.Button flat css={{tt: "capitalize", w: '100%', display: 'flex', justifyContent: 'space-between', color: '$textDark', p: '0.75rem', mb: '20px', border: '1px solid #E6E8EC'}}>
             {vals[selected]}
           </Dropdown.Button>
           <Dropdown.Menu

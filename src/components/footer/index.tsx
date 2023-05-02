@@ -8,8 +8,8 @@ export default function Footer() {
   return (
     <div className="mx-20 md:mx-[80px]">
       <div className="mt-[100px] border-b-2 border-footerDiv pb-10">
-        <div className="flex flex-col gap-20 md:flex-row justify-between mb-[40px]">
-          <div className="flex gap-[10px] justify-around">
+        <div className="flex flex-col gap-20 navLogo:flex-row justify-between mb-[40px]">
+          <div className="flex gap-[10px] justify-around navLogo:justify-start">
             <Logo />
             <div className="min-h-[98%] w-[1px] bg-[#E6E8EC]" />
             <Text className="leading-24 text-14 flex items-center" css={{color: '$textLight'}}>

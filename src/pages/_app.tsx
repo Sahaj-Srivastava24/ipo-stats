@@ -42,7 +42,7 @@ const MyApp: AppType = ({Component, pageProps}) => {
         dark: darkTheme.className
       }}>
       <NextUIProvider>
-        <Component {...pageProps} />;
+        <Component {...pageProps} />
       </NextUIProvider>
     </NextThemesProvider>
   )

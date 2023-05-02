@@ -3,7 +3,6 @@ import {Input, Text} from "@nextui-org/react";
 import SearchButton from "components/components/search_button";
 import Header from "components/components/header";
 
-
 const dm_sans = DM_Sans({
   weight: '700',
   subsets: ['latin']
@@ -14,7 +13,6 @@ export default function LandingView() {
   return (
     <div className="pb-[80px] md:pb-[140px]">
       <Header />
-
       <div className="mt-[100px] flex flex-col md:flex-row gap-[20%] justify-between">
         <div className="mx-[20px] mb-[40px] md:ml-[80px] flex flex-col gap-[30px] justify-around">
           <div className="flex flex-col gap-[10px]">

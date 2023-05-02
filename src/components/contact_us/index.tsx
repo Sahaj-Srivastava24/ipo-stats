@@ -78,7 +78,7 @@ export default function ContactUs() {
         </div>
       </div>
       <div className="flex justify-center mt-40">
-        <Button css={{backgroundColor: '#3772FF !important', borderRadius: '80px'}}>See more</Button>
+        <Button css={{backgroundColor: '#3772FF !important', borderRadius: '80px'}}>Send feedback</Button>
       </div>
     </div>
   )

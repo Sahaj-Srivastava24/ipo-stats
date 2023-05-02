@@ -6,6 +6,9 @@ import {ThemeProvider as NextThemesProvider} from 'next-themes';
 const lightTheme = createTheme({
   type: 'light',
   theme: {
+    fontSizes: {
+      
+    },
     colors: {
       backgroundLight: '#FFFFFF',
       backgroundDark: '#F4F5F6',
@@ -22,7 +25,7 @@ const darkTheme = createTheme({
   theme: {
     colors: {
       backgroundLight: '#23262F',
-      backgroundDark: '#23262F',
+      backgroundDark: '#21232C',
       textDark: '#FCFCFD',
       textLight: '#777E90',
       ipoCardBackground: '#353945',

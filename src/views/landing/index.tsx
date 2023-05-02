@@ -2,6 +2,7 @@ import {DM_Sans} from "next/font/google";
 import {Input, Text} from "@nextui-org/react";
 import SearchButton from "components/components/search_button";
 import Header from "components/components/header";
+import Illustration from "components/components/illustration";
 
 const dm_sans = DM_Sans({
   weight: '700',
@@ -11,13 +12,13 @@ const dm_sans = DM_Sans({
 export default function LandingView() {
 
   return (
-    <div className="pb-[80px] md:pb-[140px]">
+    <div className="pb-[40px] md:pb-[100px]">
       <Header />
-      <div className="mt-[100px] flex flex-col md:flex-row gap-[20%] justify-between">
-        <div className="mx-[20px] mb-[40px] md:ml-[120px] flex flex-col gap-[30px] justify-around">
+      <div className="mt-20 md:mt-[50px] landing:mt-[100px] mx-40 landing:mx-[100px] flex flex-col-reverse md:flex-row gap-[40px] justify-between">
+        <div className="flex flex-col gap-[30px] justify-around">
           <div className="flex flex-col gap-[10px]">
             <Text className="text-center md:text-left uppercase font-[700] text-[12px] md:text-[16px] leading-[12px] md:leading-[16px]" css={{color: '$textLight'}}>
-              Save your time with Stonks
+              Let us summarize what&apos;s happening
             </Text>
             <Text className={`text-center md:text-left text-[30px] md:text-[64px] leading-[30px] md:leading-[64px] font-[700] ${dm_sans.className}`} css={{color: '$textDark'}}>
               India’s first IPO platform
@@ -39,8 +40,8 @@ export default function LandingView() {
             />
           </div>
         </div>
-        <div className="flex items-center justify-center md:justify-end w-full md:w-[40%]">
-          <div className="h-[450px] w-[80%] bg-[#45B26B] rounded-[32px] md:rounded-r-[0px]"></div>
+        <div className="flex items-center justify-center w-full md:w-[40%]">
+          <Illustration />
         </div>
       </div>
     </div>

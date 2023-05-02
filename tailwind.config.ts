@@ -74,6 +74,7 @@ module.exports = {
       sm: '375px',
       navLogo: '600px',
       md: '840px',
+      landing: '1000px',
       lg: '1440px',
     },
     extend: {

@@ -1,0 +1,143 @@
+{
+    "companies": [
+        {
+            "name": "Mankind Pharma Limited",
+            "ipo_details": {
+                "ipo_date": "Apr 25, 2023 to Apr 27, 2023",
+                "listing_date": "[.]",
+                "face_value": "₹1 per share",
+                "price": "₹1026 to ₹1080 per share",
+                "lot_size": "13 Shares",
+                "total_issue_size": "40,058,844 shares (aggregating up to ₹4,326.36 Cr)",
+                "offer_for_sale": "40,058,844 shares of ₹1 (aggregating up to ₹4,326.36 Cr)",
+                "issue_type": "Book Built Issue IPO",
+                "listing_at": "BSE, NSE"
+            },
+            "ipo_anchor_investors_details": {
+                "bid_date": "Apr 24, 2023",
+                "shares_offered": "12,017,652",
+                "anchor_portion_size": "(In Cr.) 1,297.91",
+                "anchor_lock_in_period_end_date_for_50_percent_shares": "Jun 14, 2023",
+                "anchor_lock_in_period_end_date_for_remaining_shares": "Sep 8, 2023"
+            },
+            "ipo_tentative_timetable": {
+                "opening_date": "Apr 25, 2023",
+                "closing_date": "Apr 27, 2023",
+                "basis_of_allotment": "May 3, 2023",
+                "initiation_of_refunds": "May 4, 2023",
+                "credit_of_shares_to_demat": "May 5, 2023",
+                "listing_date": "May 8, 2023",
+                "upi_mandate_confirmation_cut_off_time": "5.00 PM on the issue closing day"
+            },
+            "company_financials": {
+                "period_ended": [
+                    "31-Mar-20",
+                    "31-Mar-21",
+                    "31-Dec-21",
+                    "31-Mar-22",
+                    "31-Dec-22"
+                ],
+                "total_assets": [
+                    "5,073.29",
+                    "6,372.63",
+                    "8,043.88",
+                    "9,147.74",
+                    "9,273.75"
+                ],
+                "total_revenue": [
+                    "5,975.65",
+                    "6,385.38",
+                    "6,218.29",
+                    "7,977.58",
+                    "6,777.82"
+                ],
+                "profit_after_tax": [
+                    "1,056.15",
+                    "1,293.03",
+                    "1,260.24",
+                    "1,452.96",
+                    "1,015.98"
+                ],
+                "net_worth": [
+                    "3,485.31",
+                    "4,722.00",
+                    "5,965.46",
+                    "6,155.23",
+                    "7,145.89"
+                ],
+                "reserves_and_surplus": [
+                    "3,436.34",
+                    "4,674.39",
+                    "5,916.86",
+                    "6,106.06",
+                    "7,094.12"
+                ],
+                "total_borrowing": [
+                    "126.92",
+                    "234.53",
+                    "268.70",
+                    "868.03",
+                    "167.93"
+                ]
+            }
+        },
+        {
+            "name": "Avalon Technologies Limited",
+            "ipo_details": {
+                "ipo_date": "Apr 3, 2023 to Apr 6, 2023",
+                "listing_date": "Apr 18, 2023",
+                "face_value": "₹2 per share",
+                "price": "₹415 to ₹436 per share",
+                "lot_size": "34 Shares",
+                "total_issue_size": "19,839,450 shares (aggregating up to ₹865.00 Cr)",
+                "fresh_issue": "7,339,450 shares (aggregating up to ₹320.00 Cr)",
+                "offer_for_sale": "12,500,000 shares of ₹2 (aggregating up to ₹545.00 Cr)",
+                "issue_type": "Book Built Issue IPO",
+                "listing_at": "BSE, NSE"
+            },
+            "ipo_anchor_investors_details": {
+                "bid_date": "Mar 31, 2023",
+                "shares_offered": "8,927,751",
+                "anchor_portion_size": "389.25",
+                "anchor_lock_in_period_end_date_for_50_percent_shares": "May 26, 2023",
+                "anchor_lock_in_period_end_date_for_remaining_shares": "Aug 22, 2023"
+            },
+            "ipo_tentative_timetable": {
+                "opening_date": "Apr 3, 2023",
+                "closing_date": "Apr 6, 2023",
+                "basis_of_allotment": "Apr 12, 2023",
+                "initiation_of_refunds": "Apr 13, 2023",
+                "credit_of_shares_to_demat": "Apr 17, 2023",
+                "listing_date": "Apr 18, 2023",
+                "upi_mandate_confirmation_cut_off_time": "5.00 PM on the issue closing day"
+            },
+            "company_financials": {
+                "period_ended": [
+                    "31-Mar-20",
+                    "31-Mar-21",
+                    "31-Mar-22"
+                ],
+                "total_assets": [
+                    "449.65",
+                    "512.48",
+                    "587.96"
+                ],
+                "total_revenue": [
+                    "653.15",
+                    "695.90",
+                    "851.65"
+                ],
+                "profit_after_tax": [
+                    "12.33",
+                    "23.08",
+                    "68.16"
+                ],
+                "total_borrowing": [
+                    "248.48",
+                    "295.33",
+                    "294.05"
+                ]
+            }
+        }
+    ]
+}

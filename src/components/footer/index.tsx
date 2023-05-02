@@ -6,17 +6,18 @@ import ROUTES from "components/entities/routes";
 export default function Footer() {
 
   return (
-    <div className="mx-[80px]">
+    <div className="mx-20 md:mx-[80px]">
       <div className="mt-[100px] border-b-2 border-footerDiv pb-10">
-        <div className="flex justify-between mb-[40px]">
-          <div className="flex gap-[10px]">
+        <div className="flex flex-col gap-20 md:flex-row justify-between mb-[40px]">
+          <div className="flex gap-[10px] justify-around">
             <Logo />
             <div className="min-h-[98%] w-[1px] bg-[#E6E8EC]" />
             <Text className="leading-24 text-14 flex items-center" css={{color: '$textLight'}}>
-              Save your time with Stonks
+              Exclusive IPO data platform
             </Text>
           </div>
-          <div className="flex gap-[20px] items-center">
+
+          <div className="flex gap-[20px] items-center justify-center md:justify-end">
             <Link href={ROUTES.PRIVACY} className="text-[#777E90] text-[14px]">
               <div>
                 Privacy Policy
@@ -29,7 +30,8 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-        <div className="text-[#777E90] leading-[20px] text-[12px] flex justify-between px-[0.75em]">
+
+        <div className="text-[#777E90] leading-[20px] text-[12px] flex flex-col gap-10 items-center md:flex-row md:justify-between px-[0.75em]">
           <div>
             Copyright © 2023. All rights reserved
           </div>

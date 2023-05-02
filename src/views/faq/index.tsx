@@ -14,13 +14,13 @@ export default function FAQs() {
   const [tab, setTab] = useState(0)
 
   return (
-    <div className="pt-[120px] mx-[70px]">
-      <div className="max-w-[60%] mb-[80px]">
+    <div className="pt-[120px] mx-[20px] md:mx-[70px]">
+      <div className="md:max-w-[60%] mb-[80px]">
         <div className="flex flex-col gap-[10px]">
-          <Text className="uppercase font-[700] text-[16px] leading-[16px]" css={{color: '$textLight'}}>
+          <Text className="uppercase font-[700] text-[12px] md:text-[16px] leading-[12px] md:leading-[16px]" css={{color: '$textLight'}}>
             learn how to get started
           </Text>
-          <Text className={`text-[64px] leading-[64px] font-[700] ${dm_sans.className}`} css={{color: '$textDark'}}>
+          <Text className={`text-[30px] md:text-[64px] leading-[30px] md:leading-[64px] font-[700] ${dm_sans.className}`} css={{color: '$textDark'}}>
             Frequently Asked Questions
           </Text>
           <div className="text-[#777E90] text-[16px] leading-[24px] font-[400] mt-10">
@@ -28,8 +28,8 @@ export default function FAQs() {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-[3fr,8fr]">
-        <FAQTabs tab={tab} setTab={setTab}/>
+      <div className="flex flex-col md:grid md:grid-cols-[3fr,8fr]">
+        <FAQTabs tab={tab} setTab={setTab} />
         <FAQQuestions />
       </div>
     </div>

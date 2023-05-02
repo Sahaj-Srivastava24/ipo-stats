@@ -7,6 +7,7 @@ const dm_sans = DM_Sans({
   subsets: ['latin']
 })
 
+// eslint-disable-next-line 
 export default function IPOCardWrapper(props: {heading: string, data?: any[]}) {
 
   return (

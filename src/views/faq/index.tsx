@@ -15,7 +15,7 @@ export default function FAQs() {
 
   return (
     <div className="pt-[120px] mx-[20px] md:mx-[70px]">
-      <div className="md:max-w-[60%] mb-[80px]">
+      <div className="md:max-w-[60%] mb-[60px]">
         <div className="flex flex-col gap-[10px]">
           <Text className="uppercase font-[700] text-[12px] md:text-[16px] leading-[12px] md:leading-[16px]" css={{color: '$textLight'}}>
             learn how to get started

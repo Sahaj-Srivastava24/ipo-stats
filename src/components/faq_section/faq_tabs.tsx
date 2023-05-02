@@ -9,7 +9,7 @@ export default function FAQTabs(props: {tab: number, setTab: (idx: number) => vo
 
   return (
     <>
-      <div className="flex-col gap-[30px] hidden md:flex">
+      <div className="flex-col gap-[30px] hidden md:flex mt-20">
         <div className={tabCls(0)} onClick={() => handleClick(0)}>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13.3333 12.5333V5.97739L14.3237 6.5716C14.6394 6.76103 15.0489 6.65866 15.2383 6.34294C15.4278 6.02722 15.3254 5.61771 15.0097 5.42828L11.6617 3.41951L9.10092 1.87665L9.10087 1.87663C8.91472 1.76447 8.77185 1.67839 8.65078 1.61367C8.62252 1.59786 8.59383 1.58316 8.56477 1.56957C8.464 1.52039 8.37666 1.48766 8.28692 1.46789C8.09789 1.42623 7.90207 1.42623 7.71304 1.46789C7.62307 1.48771 7.5355 1.52056 7.43441 1.56995C7.40587 1.58332 7.37769 1.59776 7.34994 1.61327C7.22871 1.67803 7.08565 1.76423 6.89911 1.87662L6.89908 1.87663L4.33444 3.42182L0.990335 5.42828C0.674615 5.61771 0.572238 6.02722 0.76167 6.34294C0.951103 6.65866 1.36061 6.76103 1.67633 6.5716L2.66665 5.97741V12.5333C2.66665 13.2801 2.66665 13.6534 2.81197 13.9386C2.9398 14.1895 3.14378 14.3935 3.39466 14.5213C3.67987 14.6667 4.05324 14.6667 4.79998 14.6667L5.99998 14.6666V10.6666C5.99998 9.56206 6.89541 8.66663 7.99998 8.66663C9.10455 8.66663 9.99998 9.56206 9.99998 10.6666V14.6666L11.2 14.6667C11.9467 14.6667 12.3201 14.6667 12.6053 14.5213C12.8562 14.3935 13.0602 14.1895 13.188 13.9386C13.3333 13.6534 13.3333 13.2801 13.3333 12.5333Z" fill="#777E91" />
@@ -54,12 +54,13 @@ export default function FAQTabs(props: {tab: number, setTab: (idx: number) => vo
             {vals[selected]}
           </Dropdown.Button>
           <Dropdown.Menu
-            aria-label="Single selection actions" 
+            aria-label="Single selection actions"
             disallowEmptySelection
             selectionMode="single"
             selectedKeys={[selected]}
             onSelectionChange={(key) => {
-              setSelected(key.anchorKey)
+              // eslint-disable-next-line 
+              setSelected((key as unknown as any).anchorKey)
             }}
           >
             <Dropdown.Item key="0">General</Dropdown.Item>

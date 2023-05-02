@@ -7,5 +7,5 @@ export default function IPOView() {
   //     (el[0] as HTMLTableRowElement).style.display = "none";
   //   }, []);
 
-  return <IPOTables name={"Mankind Pharma Limited"} />;
+  return <IPOTables name={"Avalon Technologies Limited"} />;
 }

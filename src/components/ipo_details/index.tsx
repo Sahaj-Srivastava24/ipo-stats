@@ -1,60 +1,95 @@
-import * as React from "react";
 import { Table } from "@nextui-org/react";
 import CompanyData from "./ipo-details-1.json";
 
-function IPOTables(props) {
-  let companyName = props.name;
+interface IPOTablesProps {
+  name: string;
+}
 
-  let ipoDetails;
-  let ipo_investor;
-  let profit_loss;
-  let timetable;
+interface IPODetails {
+  [key: string]: string;
+}
 
-  let deets;
+interface IPOInvestor {
+  [key: string]: string;
+}
+
+interface ProfitLoss {
+  period_ended: string[];
+  total_assets: string[];
+  total_revenue: string[];
+  profit_after_tax: string[];
+  net_worth: string[];
+  reserves_and_surplus: string[];
+  total_borrowing: string[];
+}
+
+interface Timetable {
+  [key: string]: string;
+}
+
+interface CompanyDetails {
+  name: string;
+  ipo_details: IPODetails;
+  ipo_anchor_investors_details: IPOInvestor;
+  ipo_tentative_timetable: Timetable;
+  // company_financials: ProfitLoss;
+}
+
+const IPOTables: React.FC<IPOTablesProps> = ({ name }) => {
+  let ipoDetails: IPODetails = {};
+  let ipoInvestor: IPOInvestor = {};
+  // let profitLoss: ProfitLoss = {
+  //   period_ended: [],
+  //   total_assets: [],
+  //   total_revenue: [],
+  //   profit_after_tax: [],
+  //   net_worth: [],
+  //   reserves_and_surplus: [],
+  //   total_borrowing: [],
+  // };
+  let timetable: Timetable = {};
+
+  let deets: CompanyDetails;
   for (let i = 0; i < CompanyData.companies.length; i++) {
-    if (CompanyData.companies[i].name === companyName) {
+    if (CompanyData.companies[i].name === name) {
       deets = CompanyData.companies[i];
       ipoDetails = deets.ipo_details;
-      ipo_investor = deets.ipo_anchor_investors_details;
+      ipoInvestor = deets.ipo_anchor_investors_details;
       timetable = deets.ipo_tentative_timetable;
-      profit_loss = deets.company_financials;
+      // profitLoss = deets.company_financials;
       break;
     }
   }
 
   const tableData = Object.entries(timetable).map(([key, value]) => ({
-    event: key,
+    event: key.replace(/_/g, " ").replace(/\b\w/g, (l) => l.toUpperCase()),
     date: value,
   }));
 
-  let ipoDetailsArray = Object.keys(ipoDetails).map((key) => {
+  const ipoDetailsArray = Object.keys(ipoDetails).map((key) => {
     return {
-      key: key,
+      key: key.replace(/_/g, " ").replace(/\b\w/g, (l) => l.toUpperCase()),
       value: ipoDetails[key],
     };
   });
 
-  let ipoInvestorArray = Object.keys(ipo_investor).map((key) => {
+  const ipoInvestorArray = Object.keys(ipoInvestor).map((key) => {
     return {
       key: key.replace(/_/g, " ").replace(/^\w/, (c) => c.toUpperCase()),
-      value: ipo_investor[key],
+      value: ipoInvestor[key],
     };
   });
-  const headers = Object.keys(profit_loss).filter(
-    (key) => key !== "period_ended"
-  );
 
-  const rows = profit_loss.period_ended.map((date, index) => {
-    const row = { "Period Ended": date };
-    headers.forEach((header) => {
-      row[header] = profit_loss[header][index];
-    });
-    return row;
-  });
-  console.log(rows);
+  // const data = profitLoss.period_ended.map((_, index) => ({
+  //   periodEnded: profitLoss.period_ended[index],
+  //   totalAssets: profitLoss.total_assets[index],
+  //   totalRevenue: profitLoss.total_revenue[index],
+  //   profitAfterTax: profitLoss.profit_after_tax[index],
+  //   totalBorrowing: profitLoss.total_borrowing[index],
+  // }));
   return (
     <>
-      <h1>{companyName}</h1>
+      <h1>{name}</h1>
       <h2>IPO Details</h2>
       <Table
         striped
@@ -98,11 +133,7 @@ function IPOTables(props) {
         <Table.Body>
           {tableData.map((row) => (
             <Table.Row key={row.event}>
-              <Table.Cell>
-                {row.event
-                  .replace(/_/g, " ")
-                  .replace(/\b\w/g, (l) => l.toUpperCase())}
-              </Table.Cell>
+              <Table.Cell>{row.event}</Table.Cell>
               <Table.Cell>{row.date}</Table.Cell>
             </Table.Row>
           ))}
@@ -133,6 +164,6 @@ function IPOTables(props) {
       </Table>
     </>
   );
-}
+};
 
 export default IPOTables;

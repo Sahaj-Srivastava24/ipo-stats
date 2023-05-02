@@ -28,6 +28,6 @@
     "**/*.tsx",
     "**/*.cjs",
     "**/*.mjs"
-, "src/components/ipo_details/index.jsx"  ],
+, "src/components/ipo_details/index.tsx"  ],
   "exclude": ["node_modules"]
 }

@@ -1,6 +1,13 @@
-import { Table } from "@nextui-org/react";
+import {Table} from "@nextui-org/react";
+import {useEffect} from "react";
 
 export default function IPOView() {
+
+  useEffect(() => {
+    const el = document.getElementsByClassName('nextui-table-header-row');
+    (el[0] as HTMLTableRowElement).style.display = 'none'
+  }, [])
+
   const columns = [
     {
       key: "name",
@@ -52,11 +59,7 @@ export default function IPOView() {
         minWidth: "100%",
       }}
     >
-      <Table.Header
-        css={{
-          display: "none",
-        }}
-      >
+      <Table.Header>
         <Table.Column>NAME</Table.Column>
         <Table.Column>ROLE</Table.Column>
         <Table.Column>STATUS</Table.Column>

@@ -15,7 +15,7 @@ export default function Logo() {
           <path d="M14.2 3.19998L14.5 3.29999C15.8 3.79999 17.8 4.29999 20.3 4.29999C22.9 4.29999 25.4 3.69998 27.9 2.69998L31 1.19998L28.9 0.5C28.3 0.3 27.7 0.1 27 0H26.7L26.4 0.0999756C26.1 0.199976 25.8 0.4 25.5 0.5C22.5 1.6 19.5 1.8 16.6 1C16.3 0.9 16 0.799982 15.7 0.699982L15.4 0.599976L15.1 0.699982C14.5 0.899982 13.9 1.09999 13.3 1.39999L11 2.39999L13.4 3.09998C13.6 2.99998 13.9 3.09998 14.2 3.19998Z" fill="var(--nextui-colors-textDark)" />
         </svg>
       </div>
-      <Text className="leading-[30px] font-[600] text-[24px] flex items-center" css={{color: "$textDark"}}>
+      <Text className="leading-[30px] font-[600] text-[16px] md:text-[24px] flex items-center" css={{color: "$textDark"}}>
         checkIPO
       </Text>
     </div>

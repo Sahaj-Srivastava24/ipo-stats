@@ -6,7 +6,7 @@ import MoonIcon from './MoonIcon';
 
 export default function ThemeSwitch() {
   const {setTheme} = useNextTheme();
-  const {isDark, type} = useTheme();
+  const {isDark} = useTheme();
 
   return (
     <Switch

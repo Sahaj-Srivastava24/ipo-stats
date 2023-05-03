@@ -3,7 +3,6 @@ import Head from "next/head";
 
 import { Poppins } from "next/font/google";
 // import IPOView from "components/views/ipo_details";
-import Footer from "components/components/footer";
 
 const poppins = Poppins({
   weight: ["400", "500", "700", "900"],

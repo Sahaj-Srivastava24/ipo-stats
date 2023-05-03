@@ -10,7 +10,7 @@ export default function FAQTabs(props: {
     `flex gap-10 items-center hover:text-textDark cursor-pointer ${idx === props.tab ? "text-textDark" : "text-textLight"
     }`;
   const handleClick = (idx: number) => props.setTab(idx);
-  const [selected, setSelected] = useState(0);
+  const [selected] = useState(0);
 
   return (
     <>

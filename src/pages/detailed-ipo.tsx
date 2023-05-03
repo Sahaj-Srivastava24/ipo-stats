@@ -282,8 +282,8 @@ export default function DetailedIPO() {
       </div>
       <IPODetailsTable ipoDetails={data.ipo_details} ipoInvestors={data.ipo_anchor_investors_details} ipoTT={data.ipo_tentative_timetable} />
       <IPOCompanyFinances companyFinances={data.company_financials} />
-      <Feedback />
       <Footer />
+      <Feedback />
     </>
   )
 }

@@ -26,9 +26,9 @@ const Home: NextPage = () => {
       <div className={`${poppins.className} font-[500] bg-text bg-backgroundLight`}>
         <LandingView />
         <IPOList />
-        <Feedback />
         <FAQs />
         <Footer />
+        <Feedback />
       </div>
     </>
   );

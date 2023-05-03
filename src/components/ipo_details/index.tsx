@@ -1,5 +1,5 @@
 import { Table } from "@nextui-org/react";
-import CompanyData from "./ipo-details-1.json";
+import CompanyData from "./ipo-details-1.js";
 
 interface IPOTablesProps {
   name: string;
@@ -22,6 +22,7 @@ interface CompanyDetails {
   ipo_details: IPODetails;
   ipo_anchor_investors_details: IPOInvestor;
   ipo_tentative_timetable: Timetable;
+  comp
 }
 
 const IPOTables: React.FC<IPOTablesProps> = ({ name }) => {

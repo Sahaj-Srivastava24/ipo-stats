@@ -2,7 +2,7 @@ enum ROUTES {
   HOME = '/',
   PRIVACY = '/privacy',
   DISCLAIMER = '/disclaimer',
-  IPO = '/ipo/'
+  IPO = '/detailed-ipo/'
 }
 
 export default ROUTES

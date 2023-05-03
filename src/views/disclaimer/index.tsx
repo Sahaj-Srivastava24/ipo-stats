@@ -82,7 +82,7 @@ export default function DisclaimerView() {
           </Text>
         </div>
       </div>
-      <Footer />
+      <Footer hideDisclaimer />
     </>
   )
 }

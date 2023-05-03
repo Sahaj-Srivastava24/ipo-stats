@@ -3,7 +3,7 @@ import Logo from "../logo";
 import {Collapse, Text} from "@nextui-org/react";
 import ROUTES from "components/entities/routes";
 
-export default function Footer() {
+export default function Footer({hideDisclaimer}: {hideDisclaimer?: boolean}) {
 
   return (
     <div className="mx-20 md:mx-[80px]">
@@ -40,7 +40,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div>
+      <div style={{display: hideDisclaimer ? 'none' : 'block'}}>
         <Collapse.Group>
           <Collapse expanded title="Disclaimer" css={{h3: {fontSize: '18px'}}}>
             <Text size={14} className="text-[#777E90]">

@@ -6,6 +6,7 @@ import LandingView from "components/views/landing";
 import IPOList from "components/views/ipo_list";
 import FAQs from "components/views/faq";
 import Footer from "components/components/footer";
+import Feedback from "components/components/feedback";
 
 const poppins = Poppins({
   weight: ['400', '500', '700', '900'],
@@ -25,6 +26,7 @@ const Home: NextPage = () => {
       <div className={`${poppins.className} font-[500] bg-text bg-backgroundLight`}>
         <LandingView />
         <IPOList />
+        <Feedback />
         <FAQs />
         <Footer />
       </div>

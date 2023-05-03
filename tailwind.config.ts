@@ -66,10 +66,15 @@ module.exports = {
       textLight: 'var(--nextui-colors-textLight)',
       backgroundLight: 'var(--nextui-colors-backgroundLight)',
       backgroundDark: 'var(--nextui-colors-backgroundDark)',
+
+      footerDiv: 'var(--nextui-colors-footerDiv)',
+
     },
     screens: {
       sm: '375px',
-      md: '1024px',
+      navLogo: '600px',
+      md: '840px',
+      landing: '1000px',
       lg: '1440px',
     },
     extend: {

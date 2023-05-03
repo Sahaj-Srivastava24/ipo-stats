@@ -28,7 +28,7 @@ export default function IPOCardWrapper(props: {heading: string, subheading: stri
         There are no IPOs for the given category.
       </Text>)}
 
-      {props.ipos.length > 0 && (
+      {props.ipos.length > 3 && (
         <div className="flex justify-center mt-40">
           <Button css={{backgroundColor: '#3772FF !important', borderRadius: '80px'}}>See more</Button>
         </div>

@@ -5,6 +5,7 @@ const imageMappings = {
   logoDigvi: `${imagePrefix}/logo_digvi.png`,
   logoGlobalSurface: `${imagePrefix}/logo_global_surface.png`,
   logoMankind: `${imagePrefix}/logo_mankind.png`,
+  logoNexus: `${imagePrefix}/logo_nexus.jpeg`,
   logoUdayshivakumar: `${imagePrefix}/logo_udayshivakumar_bg.png`,
 }
 

@@ -1,6 +1,7 @@
 import {type NextPage} from "next";
 import Head from "next/head";
 import {Poppins} from 'next/font/google';
+import PrivacyView from "components/views/privacy";
 
 
 const poppins = Poppins({
@@ -17,7 +18,7 @@ const Privacy: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={`${poppins.className} font-[500]`}>
-
+        <PrivacyView />
       </div>
     </>
   );

@@ -2,7 +2,7 @@ import { type NextPage } from "next";
 import Head from "next/head";
 
 import { Poppins } from "next/font/google";
-import IPOView from "components/views/ipo_details";
+// import IPOView from "components/views/ipo_details";
 import Footer from "components/components/footer";
 
 const poppins = Poppins({
@@ -21,8 +21,8 @@ const Home: NextPage = () => {
       <div
         className={`${poppins.className} bg-text bg-backgroundLight font-[500]`}
       >
-        <IPOView />
-        <Footer />
+        {/* <IPOView />
+        <Footer /> */}
       </div>
     </>
   );

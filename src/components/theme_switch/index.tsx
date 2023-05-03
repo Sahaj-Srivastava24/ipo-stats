@@ -8,8 +8,6 @@ export default function ThemeSwitch() {
   const {setTheme} = useNextTheme();
   const {isDark, type} = useTheme();
 
-  console.log(type)
-
   return (
     <Switch
       color='secondary'

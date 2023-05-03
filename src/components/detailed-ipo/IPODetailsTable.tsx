@@ -9,7 +9,6 @@ import {DM_Sans} from "next/font/google";
 
 export type TIPODetailsTable = {
   ipoDetails: any
-  ipoInvestors: any
   ipoTT: any
 }
 
@@ -26,13 +25,6 @@ export default function IPODetailsTable(props: TIPODetailsTable) {
     </Table.Row>
   ));
 
-  const rowsIPOAnchorInvestorsDetails = Object.entries(props.ipoInvestors).splice(1).map(([property, value]: [string, string], index) => (
-    <Table.Row key={index}>
-      <Table.Cell>{underscoreToWord(property)}</Table.Cell>
-      <Table.Cell>{value}</Table.Cell>
-    </Table.Row>
-  ));
-
   const rowsIPOTentativeTimetables = Object.entries(props.ipoTT).splice(1).map(([property, value]: [string, string], index) => (
     <Table.Row key={index}>
       <Table.Cell>{underscoreToWord(property)}</Table.Cell>
@@ -41,42 +33,30 @@ export default function IPODetailsTable(props: TIPODetailsTable) {
   ));
 
   return (
-    <div className="mx-30 mb-20">
-      <Text className={`text-center md:text-left text-[24px] md:text-[32px] leading-[24px] md:leading-[32px] font-[700] mb-20 pl-10 ${dm_sans.className}`} css={{color: '$textDark'}}>IPO Details</Text>
-      <div className="flex flex-col gap-30">
+    <div className="gap-20 mb-20 flex flex-col justify-between md:flex-row md:mx-30 md:justify-around md:gap-20">
+      <div className="w-full">
+        <div className="flex flex-col gap-30">
+          <Table striped bordered lined>
+            <Table.Header>
+              <Table.Column>{'IPO Details'}</Table.Column>
+              <Table.Column>{''}</Table.Column>
+            </Table.Header>
+            <Table.Body>
+              {rowsIPODetails}
+            </Table.Body>
+          </Table>
+        </div>
+      </div>
+      <div className="w-full">
         <Table striped bordered lined>
           <Table.Header>
-            <Table.Column>{'IPO Details'}</Table.Column>
+            <Table.Column>{'IPO Tentative Timetable'}</Table.Column>
             <Table.Column>{''}</Table.Column>
           </Table.Header>
           <Table.Body>
-            {rowsIPODetails}
+            {rowsIPOTentativeTimetables}
           </Table.Body>
         </Table>
-      </div>
-      <div className="flex flex-col md:flex-row gap-20 mt-30">
-        <div className='flex'>
-          <Table striped bordered lined>
-            <Table.Header>
-              <Table.Column>{'IPO Anchor Investors Details'}</Table.Column>
-              <Table.Column>{''}</Table.Column>
-            </Table.Header>
-            <Table.Body>
-              {rowsIPOAnchorInvestorsDetails}
-            </Table.Body>
-          </Table>
-        </div>
-        <div className="flex">
-          <Table striped bordered lined>
-            <Table.Header>
-              <Table.Column>{'IPO Tentative Timetable'}</Table.Column>
-              <Table.Column>{''}</Table.Column>
-            </Table.Header>
-            <Table.Body>
-              {rowsIPOTentativeTimetables}
-            </Table.Body>
-          </Table>
-        </div>
       </div>
     </div>
   )

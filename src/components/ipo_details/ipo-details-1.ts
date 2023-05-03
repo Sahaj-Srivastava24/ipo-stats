@@ -154,22 +154,6 @@ export const companies: TCompany[] = [
         ],
         records: [
           {
-            "As at": "December 31, 2022",
-            "Total Income": "67,778.21",
-            "Total Expenses": "54,935.23",
-            "Profit Before Tax": "12,939.52",
-            "Total Tax Expense": "2,779.76",
-            "Profit for the period": "10,159.76",
-          },
-          {
-            "As at": "December 31, 2021",
-            "Total Income": "62,182.89",
-            "Total Expenses": "45,161.11",
-            "Profit Before Tax": "17,115.52",
-            "Total Tax Expense": "4,513.10",
-            "Profit for the period": "12,602.42",
-          },
-          {
             "As at": "March 31, 2022",
             "Total Income": "79,775.84",
             "Total Expenses": "60,174.33",
@@ -206,27 +190,6 @@ export const companies: TCompany[] = [
           "Cash and cash equivalents at period/ year end",
         ],
         records: [
-          {
-            "As at": "December 31, 2022",
-            "Net cash inflow from operating activities (A)": "13,288.99",
-            "Net cash outflow from investing activities (B)": "-5,286.71",
-            "Net cash inflow/(outflow) from financing activities (C)":
-              "-7,961.42",
-            "Net foreign exchange difference": "63.02",
-            "Cash and cash equivalents at the beginning of the period/ year":
-              "2,830.59",
-            "Cash and cash equivalents at period/ year end": "2,934.47",
-          },
-          {
-            "As at": "December 31, 2021",
-            "Net cash inflow from operating activities (A)": "11,585.46",
-            "Net cash outflow from investing activities (B)": "-10,350.02",
-            "Net cash inflow/(outflow) from financing activities (C)": "222.53",
-            "Net foreign exchange difference": "4.99",
-            "Cash and cash equivalents at the beginning of the period/ year":
-              "1,273.28",
-            "Cash and cash equivalents at period/ year end": "2,736.24",
-          },
           {
             "As at": "March 31, 2022",
             "Net cash inflow from operating activities (A)": "9,197.76",

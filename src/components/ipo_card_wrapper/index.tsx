@@ -10,7 +10,8 @@ const dm_sans = DM_Sans({
 
 // eslint-disable-next-line 
 export default function IPOCardWrapper(props: {heading: string, subheading: string, ipos: IPO[]}) {
-
+  const wrapperCls = props.ipos.length < 3 ? 'flex mx-30 navLogo:justify-center md:mx-[80px] lg:mx-[140px]' : 'grid md:grid-cols-3 gap-[25px] mx-30 md:mx-[80px] lg:mx-[140px]'
+  const innerCls = props.ipos.length < 3 ? 'navLogo:max-w-[50%] md:max-w-[35%]' : ''
   return (
     <div className="py-20 md:pt-[50px] md:pb-[50px]">
       <div className="flex flex-col gap-10 items-center justify-center mx-30 pb-30">
@@ -21,8 +22,8 @@ export default function IPOCardWrapper(props: {heading: string, subheading: stri
       </div>
 
       {props.ipos.length > 0 ? (
-        <div className="grid md:grid-cols-3 gap-[25px] mx-30 md:mx-[80px] lg:mx-[140px]">
-          {props.ipos.map((ipo, idx) => <IPOCard ipo={ipo} key={idx} />)}
+        <div className={wrapperCls}>
+          {props.ipos.map((ipo, idx) => <IPOCard ipo={ipo} key={idx} cls={innerCls} />)}
         </div>
       ) : (<Text css={{textAlign: 'center'}}>
         There are no IPOs for the given category.

@@ -4,13 +4,13 @@ import ROUTES from "components/entities/routes";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function IPOCard({ipo}: {ipo: IPO}) {
+export default function IPOCard({ipo, cls}: {ipo: IPO, cls?: string}) {
 
   return (
-    <Link href={ROUTES.IPO}>
+    <Link href={{pathname: ROUTES.IPO, query: {id: ipo.link}}} className={cls}>
       <Container
         css={{bg: '$ipoCardBackground'}}
-        className="rounded-20 pt-[60px] pb-50 hover:transition-[box-shadow] hover:duration-[200ms] hover:shadow-[0px_64px_64px_-48px_rgba(15,15,15,0.1)]">
+        className={`rounded-20 pt-[60px] pb-50 hover:transition-[box-shadow] hover:duration-[200ms] hover:shadow-[0px_64px_64px_-48px_rgba(15,15,15,0.1)]`}>
         <div className="flex flex-cols justify-center items-center mb-30 min-h-[120px]">
           <Image src={ipo.image} alt="Company Logo" width={100} height={120} />
         </div>

@@ -50,7 +50,7 @@ export default function IPODetailsTable(props: TIPODetailsTable) {
       <div className="w-full">
         <Table striped bordered lined>
           <Table.Header>
-            <Table.Column>{'IPO Tentative Timetable'}</Table.Column>
+            <Table.Column>{'IPO Timetable'}</Table.Column>
             <Table.Column>{''}</Table.Column>
           </Table.Header>
           <Table.Body>

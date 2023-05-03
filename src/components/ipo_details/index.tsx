@@ -13,16 +13,6 @@ interface IPOInvestor {
   [key: string]: string;
 }
 
-interface ProfitLoss {
-  period_ended: string[];
-  total_assets: string[];
-  total_revenue: string[];
-  profit_after_tax: string[];
-  net_worth: string[];
-  reserves_and_surplus: string[];
-  total_borrowing: string[];
-}
-
 interface Timetable {
   [key: string]: string;
 }
@@ -32,31 +22,22 @@ interface CompanyDetails {
   ipo_details: IPODetails;
   ipo_anchor_investors_details: IPOInvestor;
   ipo_tentative_timetable: Timetable;
-  // company_financials: ProfitLoss;
 }
 
 const IPOTables: React.FC<IPOTablesProps> = ({ name }) => {
   let ipoDetails: IPODetails = {};
   let ipoInvestor: IPOInvestor = {};
-  // let profitLoss: ProfitLoss = {
-  //   period_ended: [],
-  //   total_assets: [],
-  //   total_revenue: [],
-  //   profit_after_tax: [],
-  //   net_worth: [],
-  //   reserves_and_surplus: [],
-  //   total_borrowing: [],
-  // };
   let timetable: Timetable = {};
 
   let deets: CompanyDetails;
+
   for (let i = 0; i < CompanyData.companies.length; i++) {
     if (CompanyData.companies[i].name === name) {
       deets = CompanyData.companies[i];
       ipoDetails = deets.ipo_details;
       ipoInvestor = deets.ipo_anchor_investors_details;
       timetable = deets.ipo_tentative_timetable;
-      // profitLoss = deets.company_financials;
+
       break;
     }
   }

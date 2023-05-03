@@ -28,6 +28,209 @@
                 "credit_of_shares_to_demat": "May 5, 2023",
                 "listing_date": "May 8, 2023",
                 "upi_mandate_confirmation_cut_off_time": "5.00 PM on the issue closing day"
+            },
+            "company_financials": {
+                "assets": {
+                    "columns": [
+                        "As at",
+                        "Total Non-Current Assets",
+                        "Total Current Assets",
+                        "Total Assets"
+                    ],
+                    "records": [
+                        {
+                            "As at": "December 31, 2022",
+                            "Total Non-Current Assets": "53,048.63",
+                            "Total Current Assets": "39,688.90",
+                            "Total Assets": "92,737.53"
+                        },
+                        {
+                            "As at": "December 31, 2021",
+                            "Total Non-Current Assets": "27,381.68",
+                            "Total Current Assets": "53,057.11",
+                            "Total Assets": "80,438.79"
+                        },
+                        {
+                            "As at": "March 31, 2022",
+                            "Total Non-Current Assets": "47,409.21",
+                            "Total Current Assets": "44,068.19",
+                            "Total Assets": "91,477.40"
+                        },
+                        {
+                            "As at": "March 31, 2021",
+                            "Total Non-Current Assets": "24,659.95",
+                            "Total Current Assets": "39,066.37",
+                            "Total Assets": "63,726.32"
+                        },
+                        {
+                            "As at": "March 31, 2020",
+                            "Total Non-Current Assets": "22,510.70",
+                            "Total Current Assets": "28,222.15",
+                            "Total Assets": "50,732.85"
+                        }
+                    ]
+                },
+                "liabilities": {
+                    "columns": [
+                        "As at",
+                        "Total Equity",
+                        "Total Non-Current Liabilities",
+                        "Total Current Liabilities",
+                        "Total Equity and Liabilities"
+                    ],
+                    "records": [
+                        {
+                            "As at": "December 31, 2022",
+                            "Total Equity": "73,255.65",
+                            "Total Non-Current Liabilities": "2,444.34",
+                            "Total Current Liabilities": "17,037.54",
+                            "Total Liabilties": "19,481.88",
+                            "Total Equity and Liabilities": "92,737.53"
+                        },
+                        {
+                            "As at": "December 31, 2021",
+                            "Total Equity": "61,237.39",
+                            "Total Non-Current Liabilities": "1,623.79",
+                            "Total Current Liabilities": "17,577.61",
+                            "Total Liabilties": "19,201.40",
+                            "Total Equity and Liabilities": "80,438.79"
+                        },
+                        {
+                            "As at": "March 31, 2022",
+                            "Total Equity": "63,163.08",
+                            "Total Non-Current Liabilities": "2,079.63",
+                            "Total Current Liabilities": "26,234.69",
+                            "Total Liabilties": "28,314.32",
+                            "Total Equity and Liabilities": "91,477.40"
+                        },
+                        {
+                            "As at": "March 31, 2021",
+                            "Total Equity": "48,628.89",
+                            "Total Non-Current Liabilities": "1,563.45",
+                            "Total Current Liabilities": "13,533.98",
+                            "Total Liabilties": "15,097.43",
+                            "Total Equity and Liabilities": "63,726.32"
+                        },
+                        {
+                            "As at": "March 31, 2020",
+                            "Total Equity": "36,715.70",
+                            "Total Non-Current Liabilities": "1,431.26",
+                            "Total Current Liabilities": "12,585.89",
+                            "Total Liabilties": "14,017.15",
+                            "Total Equity and Liabilities": "50,732.85"
+                        }
+                    ]
+                },
+                "profit_loss": {
+                    "columns": [
+                        "As at",
+                        "Total Income",
+                        "Total Expenses",
+                        "Profit Before Tax",
+                        "Total Tax Expense",
+                        "Profit for the period"
+                    ],
+                    "records": [
+                        {
+                            "As at": "December 31, 2022",
+                            "Total Income": "67,778.21",
+                            "Total Expenses": "54,935.23",
+                            "Profit Before Tax": "12,939.52",
+                            "Total Tax Expense": "2,779.76",
+                            "Profit for the period": "10,159.76"
+                        },
+                        {
+                            "As at": "December 31, 2021",
+                            "Total Income": "62,182.89",
+                            "Total Expenses": "45,161.11",
+                            "Profit Before Tax": "17,115.52",
+                            "Total Tax Expense": "4,513.10",
+                            "Profit for the period": "12,602.42"
+                        },
+                        {
+                            "As at": "March 31, 2022",
+                            "Total Income": "79,775.84",
+                            "Total Expenses": "60,174.33",
+                            "Profit Before Tax": "19,745.99",
+                            "Total Tax Expense": "5,216.43",
+                            "Profit for the period": "14,529.56"
+                        },
+                        {
+                            "As at": "March 31, 2021",
+                            "Total Income": "63,853.80",
+                            "Total Expenses": "47,054.46",
+                            "Profit Before Tax": "16,916.11",
+                            "Total Tax Expense": "3,985.77",
+                            "Profit for the period": "12,930.34"
+                        },
+                        {
+                            "As at": "March 31, 2020",
+                            "Total Income": "59,756.54",
+                            "Total Expenses": "45,494.54",
+                            "Profit Before Tax": "14,377.35",
+                            "Total Tax Expense": "3,815.87",
+                            "Profit for the period": "10,561.48"
+                        }
+                    ]
+                },
+                "cash_flow": {
+                    "columns": [
+                        "As at",
+                        "Net cash inflow from operating activities (A)",
+                        "Net cash outflow from investing activities (B)",
+                        "Net cash inflow/(outflow) from financing activities (C)",
+                        "Net foreign exchange difference",
+                        "Cash and cash equivalents at the beginning of the period/ year",
+                        "Cash and cash equivalents at period/ year end"
+                    ],
+                    "records": [
+                        {
+                            "As at": "December 31, 2022",
+                            "Net cash inflow from operating activities (A)": "13,288.99",
+                            "Net cash outflow from investing activities (B)": "-5,286.71",
+                            "Net cash inflow/(outflow) from financing activities (C)": "-7,961.42",
+                            "Net foreign exchange difference": "63.02",
+                            "Cash and cash equivalents at the beginning of the period/ year": "2,830.59",
+                            "Cash and cash equivalents at period/ year end": "2,934.47"
+                        },
+                        {
+                            "As at": "December 31, 2021",
+                            "Net cash inflow from operating activities (A)": "11,585.46",
+                            "Net cash outflow from investing activities (B)": "-10,350.02",
+                            "Net cash inflow/(outflow) from financing activities (C)": "222.53",
+                            "Net foreign exchange difference": "4.99",
+                            "Cash and cash equivalents at the beginning of the period/ year": "1,273.28",
+                            "Cash and cash equivalents at period/ year end": "2,736.24"
+                        },
+                        {
+                            "As at": "March 31, 2022",
+                            "Net cash inflow from operating activities (A)": "9,197.76",
+                            "Net cash outflow from investing activities (B)": "-13,691.43",
+                            "Net cash inflow/(outflow) from financing activities (C)": "6,046.20",
+                            "Net foreign exchange difference": "4.78",
+                            "Cash and cash equivalents at the beginning of the period/ year": "1,273.28",
+                            "Cash and cash equivalents at period/ year end": "2,830.59"
+                        },
+                        {
+                            "As at": "March 31, 2021",
+                            "Net cash inflow from operating activities (A)": "11,372.44",
+                            "Net cash outflow from investing activities (B)": "-12,222.11",
+                            "Net cash inflow/(outflow) from financing activities (C)": "-78.11",
+                            "Net foreign exchange difference": "3.75",
+                            "Cash and cash equivalents at the beginning of the period/ year": "2,197.31",
+                            "Cash and cash equivalents at period/ year end": "1,273.28"
+                        },
+                        {
+                            "As at": "March 31, 2020",
+                            "Net cash inflow from operating activities (A)": "10,697.05",
+                            "Net cash outflow from investing activities (B)": "-4,391.55",
+                            "Net cash inflow/(outflow) from financing activities (C)": "-5,307.38",
+                            "Net foreign exchange difference": "36.04",
+                            "Cash and cash equivalents at the beginning of the period/ year": "1,163.15",
+                            "Cash and cash equivalents at period/ year end": "2,197.31"
+                        }
+                    ]
+                }
             }
         },
         {

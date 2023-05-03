@@ -1,6 +1,7 @@
 import {Text} from "@nextui-org/react"
 import FAQQuestions from "components/components/faq_section/faq_questions"
 import FAQTabs from "components/components/faq_section/faq_tabs"
+import {FAQs} from "components/entities/faqs"
 import {DM_Sans} from "next/font/google"
 import {useState} from "react"
 
@@ -10,9 +11,9 @@ const dm_sans = DM_Sans({
 })
 
 
-export default function FAQs() {
+export default function FAQView() {
   const [tab, setTab] = useState(0)
-
+  const tabKeys = Object.keys(FAQs)
   return (
     <div className="pt-[100px] mx-[20px] md:mx-[70px]">
       <div className="md:max-w-[60%] mb-[60px]">
@@ -26,8 +27,8 @@ export default function FAQs() {
         </div>
       </div>
       <div className="flex flex-col md:grid md:grid-cols-[3fr,8fr]">
-        <FAQTabs tab={tab} setTab={setTab} />
-        <FAQQuestions />
+        <FAQTabs tabs={tabKeys} tab={tab} setTab={setTab} />
+        <FAQQuestions ques={FAQs[tabKeys[tab]]} />
       </div>
     </div>
   )

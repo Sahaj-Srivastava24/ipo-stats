@@ -1,5 +1,6 @@
 import {Button, Input, Radio, Text} from "@nextui-org/react";
 import {DM_Sans, Poppins} from "next/font/google";
+import {useState} from "react";
 
 const dm_sans = DM_Sans({
   weight: '700',
@@ -13,8 +14,25 @@ const poppins = Poppins({
 
 
 export default function Feedback() {
-  const Label = ({text}: {text: string}) => {
+  const [name, setName] = useState('')
+  const [mail, setMail] = useState('')
+  const [radioOne, setRadioOne] = useState('')
+  const [radioTwo, setRadioTwo] = useState('')
+  const [radioThree, setRadioThree] = useState('')
+  const [feed, setFeed] = useState('')
 
+
+  const handleSubmit = async () => {
+    const feedback = {name, mail, radioOne, radioTwo, radioThree, feed}
+    const postRes = await fetch('/api/feedback', {
+      method: 'POST',
+      body: JSON.stringify({feedback})
+    })
+
+    console.log(postRes.json())
+  }
+
+  const Label = ({text}: {text: string}) => {
     return (
       <Text className={poppins.className} css={{fontSize: '14px', }}>
         {text}
@@ -43,17 +61,27 @@ export default function Feedback() {
             clearable
             underlined
             label="Name"
+            value={name}
             placeholder="Enter your name"
+            onChange={(e) => setName(e.target.value)}
           />
           <Input
+            type="email"
             clearable
             underlined
             label="Mail"
+            value={mail}
             placeholder="Enter your mail"
+            onChange={(e) => setMail(e.target.value)}
           />
         </div>
         <div className="flex gap-[20px]">
-          <Radio.Group orientation="horizontal" size="sm" label={<Label text='Was the information on the website helpful in understanding the IPO process?' />} >
+          <Radio.Group
+            size="sm"
+            value={radioOne}
+            orientation="horizontal"
+            onChange={(e) => setRadioOne(e)}
+            label={<Label text='Was the information on the website helpful in understanding the IPO process?' />} >
             <Radio value="yes" color="secondary">
               Yes
             </Radio>
@@ -63,7 +91,12 @@ export default function Feedback() {
           </Radio.Group>
         </div>
         <div className="flex gap-[20px]">
-          <Radio.Group orientation="horizontal" size="sm" label={<Label text="Did you find the website's design appealing and user-friendly?" />}>
+          <Radio.Group
+            size="sm"
+            value={radioTwo}
+            orientation="horizontal"
+            onChange={(e) => setRadioTwo(e)}
+            label={<Label text="Did you find the website's design appealing and user-friendly?" />}>
             <Radio value="yes" color="secondary">
               Yes
             </Radio>
@@ -73,7 +106,12 @@ export default function Feedback() {
           </Radio.Group>
         </div>
         <div className="flex gap-[20px]">
-          <Radio.Group orientation="horizontal" size="sm" label={<Label text="Were you able to easily find the details of the current and upcoming IPOs on the website?" />}>
+          <Radio.Group
+            size="sm"
+            value={radioThree}
+            orientation="horizontal"
+            onChange={(e) => setRadioThree(e)}
+            label={<Label text="Were you able to easily find the details of the current and upcoming IPOs on the website?" />}>
             <Radio value="yes" color="secondary">
               Yes
             </Radio>
@@ -86,6 +124,8 @@ export default function Feedback() {
           <Input
             clearable
             underlined
+            value={feed}
+            onChange={(e) => setFeed(e.target.value)}
             placeholder="Tell us about your experience"
             label="Could you please share your overall feedback about the IPO website?"
             css={{w: '100%'}}
@@ -93,7 +133,8 @@ export default function Feedback() {
         </div>
       </div>
       <div className="flex justify-center mt-40">
-        <Button css={{backgroundColor: '#3772FF !important', borderRadius: '80px'}}>Send feedback</Button>
+        {/* eslint-disable-next-line  */}
+        <Button css={{backgroundColor: '#3772FF !important', borderRadius: '80px'}} onPress={handleSubmit}>Send feedback</Button>
       </div>
     </div>
   )

@@ -41,7 +41,7 @@ export default function IPODetailsTable(props: TIPODetailsTable) {
   ));
 
   return (
-    <div className="mx-30">
+    <div className="mx-30 mb-20">
       <Text className={`text-center md:text-left text-[24px] md:text-[32px] leading-[24px] md:leading-[32px] font-[700] mb-20 pl-10 ${dm_sans.className}`} css={{color: '$textDark'}}>IPO Details</Text>
       <div className="flex flex-col gap-30">
         <Table striped bordered lined>
@@ -54,8 +54,8 @@ export default function IPODetailsTable(props: TIPODetailsTable) {
           </Table.Body>
         </Table>
       </div>
-      <div className="grid md:grid-cols-2 gap-20 mt-30">
-        <div>
+      <div className="flex flex-col md:flex-row gap-20 mt-30">
+        <div className='flex'>
           <Table striped bordered lined>
             <Table.Header>
               <Table.Column>{'IPO Anchor Investors Details'}</Table.Column>
@@ -66,10 +66,10 @@ export default function IPODetailsTable(props: TIPODetailsTable) {
             </Table.Body>
           </Table>
         </div>
-        <div>
+        <div className="flex">
           <Table striped bordered lined>
             <Table.Header>
-              <Table.Column>{'IPO Anchor Investors Details'}</Table.Column>
+              <Table.Column>{'IPO Tentative Timetable'}</Table.Column>
               <Table.Column>{''}</Table.Column>
             </Table.Header>
             <Table.Body>

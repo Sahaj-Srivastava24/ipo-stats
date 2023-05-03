@@ -270,9 +270,9 @@ export default function DetailedIPO() {
   return (
     <>
       <Header />
-      <div className="flex flex-col-reverse md:flex-row gap-10 mx-30 pb-30 mt-30 md:justify-between md:items-center">
-        <div className="flex flex-col gap-10 md:ml-10  md:max-w-[60%]">
-          <Text className={`text-center md:text-left text-[42px] md:text-[42px] leading-[30px] md:leading-[42px] font-[700] ${dm_sans.className} max-w-[60%]`} css={{color: '$textDark'}}>{data.name}</Text>
+      <div className="flex flex-col-reverse items-center md:flex-row gap-30 md:gap-10 mx-30 pb-30 mt-30 md:justify-between md:items-center">
+        <div className="flex flex-col items-center gap-10 md:ml-10 md:items-start md:max-w-[60%]">
+          <Text className={`text-center md:text-left text-[30px] md:text-[42px] leading-[30px] md:leading-[42px] font-[700] ${dm_sans.className} md:max-w-[60%]`} css={{color: '$textDark'}}>{data.name}</Text>
           <Text className="text-[16px] leading-[24px] md:text-[12px] md:leading-[16px]" css={{color: '$textLight'}}>
             {data.des}
           </Text>

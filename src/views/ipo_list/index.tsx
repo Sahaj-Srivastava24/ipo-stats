@@ -6,9 +6,9 @@ import {LiveIPOs as liveIPO} from "components/entities/live-ipo"
 export default function IPOList() {
   return (
     <div className="bg-backgroundDark w-full">
-      <IPOCardWrapper heading={'Listed IPOs'} subheading={'IPOs that are currently listed in BSE and NSE'} ipos={listedIPO} />
+      <IPOCardWrapper heading={'Listed IPOs'} subheading={'IPOs that are currently listed on exchanges.'} ipos={listedIPO} />
       {/* eslint-disable-next-line */}
-      <IPOCardWrapper heading={'Live IPOs'} subheading={'IPOs that are currently live in BSE and NSE'} ipos={liveIPO} />
+      <IPOCardWrapper heading={'Live IPOs'} subheading={'IPOs that are currently live for the subscription.'} ipos={liveIPO} />
     </div>
   )
 }

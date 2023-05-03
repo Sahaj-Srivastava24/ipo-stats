@@ -8,116 +8,83 @@ export type TFAQ = {
 }
 
 export const FAQs: TFAQs = {
-  "IPOs in Indian Markets": [
+  "General": [
     {
       question: "What is an IPO?",
       answer:
         "An IPO or Initial Public Offering is the process by which a company goes public by issuing its shares to the public for the first time.",
     },
     {
-      question: "What are the benefits of investing in IPOs?",
+      question: "What is the IPO price band?",
       answer:
-        "Investing in IPOs can provide investors with the opportunity to buy shares in a company at a lower price than the market price, which can lead to significant gains in the long term.",
+        "Price bands signify the upper and lower share price thresholds for a bookbuilding IPO. Investors can submit bids within the upper and lower limits,called floor price and cap price, respectively.",
     },
     {
-      question: "What is the process of investing in an IPO?",
+      question: "What is the lot size?",
       answer:
-        "To invest in an IPO, investors need to open a demat account with a stockbroker and then apply for shares through the IPO application process.",
+        "Lot size is the minimum number of shares that an investor needs to bid for. It is different for each IPO and is fixed by the company.",
     },
     {
-      question: "How are IPO prices determined?",
+      question: "What is the cut-off price? ",
       answer:
-        "IPO prices are determined by the company and its underwriters based on market demand, the company's financial performance, and other factors.",
-    },
-    {
-      question: "What are the risks associated with investing in IPOs?",
-      answer:
-        "The main risks associated with investing in IPOs include market volatility, lack of historical data, and the possibility of the company not performing as well as expected.",
+        "The offer price at which shares are issued to investors in an IPO is known as the cut- off price, which can be any price within the specified price band",
     },
   ],
-  "Process of IPO": [
+  "Investor Types": [
     {
-      question: "What are the steps involved in an IPO process?",
+      question: "What is Non-Institutional Investors (NII)",
       answer:
-        "The steps involved in an IPO process include selecting investment bankers, filing the registration statement with the SEBI, marketing the IPO to investors, setting the offer price, and finally, listing the shares on the stock exchange.",
+        "Resident Indian individuals, NRIs, HUFs, HNIs, Companies, Corporate Bodies, Scientific Institutions, Societies, and Trusts who apply for more than Rs 2 lakhs of IPO shares fall under the NII category.",
     },
     {
-      question: "What is a prospectus?",
+      question: "What is Retail Individual Investors (RII)",
       answer:
-        "A prospectus is a legal document that provides information about the company, its business operations, financial statements, and other key information related to the IPO.",
+        "Resident Indian Individuals, NRIs and HUFs who apply for less than Rs 2 lakhs in an IPO fall under the RII category.Not less than 35% of the Offer is reserved for the RII category..",
     },
     {
-      question: "What is the role of underwriters in an IPO?",
+      question: "What is Qualified Institutional Bidders (QIB)",
       answer:
-        "Underwriters are financial institutions that help the company to issue shares in the primary market by buying the shares themselves and then selling them to the public.",
+        "Public financial institutions, commercial banks, mutual funds, Foreign Portfolio Investors, etc can apply in the QIB category.SEBI registration is required for institutions to apply under this category.",
     },
     {
-      question: "What is a book-building process?",
+      question: "Who are Anchor investors?",
       answer:
-        "The book-building process is a mechanism used to determine the demand for shares in an IPO by allowing investors to bid for shares at various prices.",
-    },
-    {
-      question: "What is the lock-in period for IPO shares?",
-      answer:
-        "The lock-in period is the period during which the shares issued in an IPO cannot be sold or transferred by the company's promoters and other key members.",
+        "An anchor investor in a public issue is a QIB making an application for a value of Rs 10 crores or more through the book- building process.An anchor investor can attract investors to public offers before they hit the market to boost their confidence.",
     },
   ],
-  "Listing and Trading of IPOs": [
+  "Grey Market": [
     {
-      question: "What is the listing process for an IPO?",
+      question: "What is Grey Market? ",
       answer:
-        "The listing process involves the shares of the company being listed on a stock exchange for trading, allowing investors to buy and sell shares in the secondary market.",
+        "IPO Grey Market is an unofficial market where IPO applications or shares are bought and sold before they become officially available for trading on the stock exchange.",
     },
     {
-      question: "When do IPO shares start trading?",
+      question: "How are Grey market prices decided?",
       answer:
-        "IPO shares start trading on the stock exchange a few days after the IPO closes and the shares are listed on the exchange.",
+        "Just like the stock market or commodity market trading, IPO Grey Market Premiums are decided on the basis of demand and supply.",
     },
     {
       question:
-        "What is the difference between the primary and secondary market?",
+        "What is GMP?",
       answer:
-        "The primary market is where the company issues shares to the public for the first time, while the secondary market is where investors buy and sell shares among themselves after they have been listed on a stock exchange.",
-    },
-    {
-      question:
-        "How is the price of an IPO share determined on the stock exchange?",
-      answer:
-        "The price of an IPO share is determined based on the supply and demand for the shares in the secondary market, and can fluctuate depending on various factors such as market conditions, company performance, and investor sentiment.",
-    },
-    {
-      question:
-        "Can IPO shares be sold immediately after listing on the stock exchange?",
-      answer:
-        "Yes, IPO shares can be sold immediately after listing on the stock exchange, subject to certain restrictions such as the lock-in period for promoters and other key members.",
+        "GMP or Grey Market Premium is the premium at which the IPO shares are traded in the grey market.GMP is a rough estimation of how the shares will perform on listing day.",
     },
   ],
-  "Regulations and Compliance": [
+  "SME IPO": [
     {
-      question: "What is SEBI and what is its role in IPOs?",
+      question: "What is SME IPO?",
       answer:
-        "SEBI or Securities and Exchange Board of India is the regulatory body for securities markets in India and oversees the issuance of IPOs to ensure compliance with regulations and protect investor interests.",
+        "SMEs are Small and medium Enterprises. SME IPOs are the IPO issued by these SME companies.",
     },
     {
-      question: "What are the disclosure requirements for IPOs?",
+      question: "Difference between Mainline IPO and SME IPO? ",
       answer:
-        "IPOs are required to disclose detailed information about the company's financial performance, business operations, and other key information that investors would need to make informed decisions about investing in the company.",
+        "Companies with minimum post-issue paid-up capital of Rs 10 crores can raise funds through Mainboard IPO.Those with minimum post- issue capital of Rs 1 crore and a maximum of Rs 25 crore are eligible for SME IPO.",
     },
     {
-      question: "What is the minimum subscription requirement for an IPO?",
+      question: "What is SME exchange?",
       answer:
-        "The minimum subscription requirement for an IPO is 90% of the total issue size. If the subscription falls below this level, the IPO is considered a failure and the issue is withdrawn.",
+        "SME exchange is a stock exchange dedicated for trading the shares of small and medium enterprises(SMEs) who, otherwise, find it difficult to get listed in the main exchanges.",
     },
-    {
-      question:
-        "What are the penalties for non-compliance with IPO regulations?",
-      answer:
-        "Non-compliance with IPO regulations can lead to penalties and fines imposed by SEBI, as well as legal action by investors who may suffer losses due to the non-compliance.",
-    },
-    {
-      question: "What is the role of merchant bankers in an IPO?",
-      answer:
-        "Merchant bankers are financial institutions that help companies to raise capital through IPOs by providing various services such as underwriting, marketing, and pricing of the shares.",
-    },
-  ],
+  ]
 };

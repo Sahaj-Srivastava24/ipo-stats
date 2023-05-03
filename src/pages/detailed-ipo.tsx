@@ -1,6 +1,7 @@
 import {Text} from "@nextui-org/react";
 import IPOCompanyFinances from "components/components/detailed-ipo/IPOCompanyFinances";
 import IPODetailsTable from "components/components/detailed-ipo/IPODetailsTable";
+import Feedback from "components/components/feedback";
 import Footer from "components/components/footer";
 import Header from "components/components/header";
 import imageMappings from "components/entities/imageMappings";
@@ -270,17 +271,18 @@ export default function DetailedIPO() {
   return (
     <>
       <Header />
-      <div className="flex flex-col-reverse items-center md:flex-row gap-30 md:gap-10 mx-30 pb-30 mt-30 md:justify-between md:items-center">
+      <div className="flex flex-col-reverse items-center md:flex-row gap-30 md:gap-10 mx-30 pb-30 mt-30 md:items-center">
+        <Image src={imageMappings.logoMankind} alt="Company Image" width={300} height={200} className="w-300 h-200 md:ml-30" />
         <div className="flex flex-col items-center gap-10 md:ml-10 md:items-start md:max-w-[60%]">
           <Text className={`text-center md:text-left text-[30px] md:text-[42px] leading-[30px] md:leading-[42px] font-[700] ${dm_sans.className} md:max-w-[60%]`} css={{color: '$textDark'}}>{data.name}</Text>
           <Text className="text-[16px] leading-[24px] md:text-[12px] md:leading-[16px]" css={{color: '$textLight'}}>
             {data.des}
           </Text>
         </div>
-        <Image src={imageMappings.logoMankind} alt="Company Image" width={300} height={200} className="w-300 h-200 md:mr-30" />
       </div>
       <IPODetailsTable ipoDetails={data.ipo_details} ipoInvestors={data.ipo_anchor_investors_details} ipoTT={data.ipo_tentative_timetable} />
       <IPOCompanyFinances companyFinances={data.company_financials} />
+      <Feedback />
       <Footer />
     </>
   )

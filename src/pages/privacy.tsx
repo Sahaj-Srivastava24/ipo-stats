@@ -2,6 +2,7 @@ import {type NextPage} from "next";
 import Head from "next/head";
 import {Poppins} from 'next/font/google';
 import PrivacyView from "components/views/privacy";
+import Feedback from "components/components/feedback";
 
 
 const poppins = Poppins({
@@ -19,6 +20,7 @@ const Privacy: NextPage = () => {
       </Head>
       <div className={`${poppins.className} font-[500]`}>
         <PrivacyView />
+        <Feedback />
       </div>
     </>
   );

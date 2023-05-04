@@ -50,7 +50,7 @@ export default function Feedback() {
     py: "10px",
     h: "50px",
     color: "$accents7 !important",
-    bgColor: "#00CCFF !important",
+    bgColor: "$accents0 !important",
     zIndex: 3,
   };
 
@@ -71,12 +71,6 @@ export default function Feedback() {
             fill="var(--nextui-colors-accents7)"
           />
         </svg>
-        <Text
-          className={`text-center ${dm_sans.className}`}
-          css={{ color: "$textDark" }}
-        >
-          Write a Feedback
-        </Text>
       </Button>
       <Modal
         width="70%"

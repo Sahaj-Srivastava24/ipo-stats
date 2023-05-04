@@ -26,14 +26,14 @@ export default function Feedback() {
     console.log("closed");
   };
 
-  const handleSubmit = async () => {
-    const feedback = { name, mail, radioOne, radioTwo, radioThree, feed };
-    const postRes = await fetch("/api/feedback", {
-      method: "POST",
-      body: JSON.stringify({ feedback }),
-    });
-    console.log(postRes.json());
-  };
+  // const handleSubmit = async () => {
+  //   const feedback = { name, mail, radioOne, radioTwo, radioThree, feed };
+  //   const postRes = await fetch("/api/feedback", {
+  //     method: "POST",
+  //     body: JSON.stringify({ feedback }),
+  //   });
+  //   console.log(postRes.json());
+  // };
 
   const Label = ({ text }: { text: string }) => {
     return (
@@ -61,7 +61,7 @@ export default function Feedback() {
           width="30"
           height="30"
           viewBox="0 0 30 30"
-          fill="none"
+          fill="#00CCFF"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -193,7 +193,6 @@ export default function Feedback() {
                 backgroundColor: "#3772FF !important",
                 borderRadius: "80px",
               }}
-              onPress={handleSubmit}
             >
               Send feedback
             </Button>

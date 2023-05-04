@@ -66,8 +66,8 @@ type TCompanyFinancials = {
 type TCompany = {
   name: string;
   value: string;
-  description: string
-  image: string
+  description: string;
+  image: string;
   ipo_details: TIPODetails;
   ipo_tentative_timetable: TIPOTimeTable;
   company_financials: TCompanyFinancials;
@@ -284,7 +284,7 @@ As of December 31, 2022, the Company had a team of over 600 scientists and a ded
           "Total Equity",
           "Total Non-Current Liabilities",
           "Total Current Liabilities",
-          "Toal Liabilities",
+          "Total Liabilities",
           "Total Equity and Liabilities",
         ],
         records: [
@@ -376,7 +376,7 @@ As of December 31, 2022, the Company had a team of over 600 scientists and a ded
             "Net cash outflow from investing activities (B)": "-2,706.85",
             "Net cash inflow/(outflow) from financing activities (C)":
               "4,381.78",
-            "Net foreign exchange difference": "",
+            "Net foreign exchange difference": "NA",
             "Cash and cash equivalents at the beginning of the period/ year":
               "2,509.36",
             "Cash and cash equivalents at period/ year end": "2,895.51",
@@ -387,7 +387,7 @@ As of December 31, 2022, the Company had a team of over 600 scientists and a ded
             "Net cash outflow from investing activities (B)": "748.97",
             "Net cash inflow/(outflow) from financing activities (C)":
               "-4,028.35",
-            "Net foreign exchange difference": "",
+            "Net foreign exchange difference": "NA",
             "Cash and cash equivalents at the beginning of the period/ year":
               "1,656.04",
             "Cash and cash equivalents at period/ year end": "2,509.36",
@@ -398,7 +398,7 @@ As of December 31, 2022, the Company had a team of over 600 scientists and a ded
             "Net cash outflow from investing activities (B)": "-10,081.75",
             "Net cash inflow/(outflow) from financing activities (C)":
               "-1,060.27",
-            "Net foreign exchange difference": "",
+            "Net foreign exchange difference": "NA",
             "Cash and cash equivalents at the beginning of the period/ year":
               "1,571.37",
             "Cash and cash equivalents at period/ year end": "1,656.04",

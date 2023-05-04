@@ -50,7 +50,7 @@ export default function Feedback() {
     py: "10px",
     h: "50px",
     color: "$accents7 !important",
-    bgColor: "$accents0 !important",
+    bgColor: "#00CCFF !important",
     zIndex: 3,
   };
 
@@ -61,7 +61,7 @@ export default function Feedback() {
           width="30"
           height="30"
           viewBox="0 0 30 30"
-          fill="#00CCFF"
+          fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -71,6 +71,12 @@ export default function Feedback() {
             fill="var(--nextui-colors-accents7)"
           />
         </svg>
+        <Text
+          className={`text-center ${dm_sans.className}`}
+          css={{ color: "$textDark" }}
+        >
+          Write a Feedback
+        </Text>
       </Button>
       <Modal
         width="70%"

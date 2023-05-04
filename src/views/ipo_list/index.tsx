@@ -10,12 +10,12 @@ export default function IPOList() {
         subheading={"IPOs that are currently live for the subscription."}
         ipos={liveIPO}
       />
+      {/* eslint-disable-next-line */}
       <IPOCardWrapper
         heading={"Listed IPOs"}
         subheading={"IPOs that are currently listed on exchanges."}
         ipos={listedIPO}
       />
-      {/* eslint-disable-next-line */}
     </div>
   );
 }

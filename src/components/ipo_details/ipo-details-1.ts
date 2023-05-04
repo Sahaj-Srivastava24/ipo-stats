@@ -244,13 +244,19 @@ As of December 31, 2022, the Company had a team of over 600 scientists and a ded
     name: "Nexus Select Trust REIT",
     value: "In ₹ millions",
     description: `
-Incorporated in 1991, Mankind Pharma Limited develops, manufactures, and markets pharmaceutical formulations across various acute and chronic therapeutic areas and several consumer healthcare products.
-In India, the business is active in a number of acute and chronic therapeutic fields, including anti-infectives, cardiovascular, gastrointestinal, anti-diabetic, neuro/CNS, vitamins/minerals/nutrients, and respiratory.
-It has over 36 brands, including Manforce (Rx), Moxikind-CV, Amlokind-AT, Unwanted-Kit, Candiforce, Gudcef, Glimestar-M, Prega News, Dydroboon, Codistar, Nurokind-Gold, Nurokind Plus-RF, Nurokind-LC, Asthakind-DX, Cefakind, Monticope, Telmikind-H, Telmikind, Gudcef-CV, and Unwanted-72, among them.
-Mankind Pharma has one of the largest distribution networks of medical representatives in the Indian pharmaceutical market. Over 80% of doctors in India prescribed their formulations and has been ranked number 4th in terms of domestic sales during the Financial Year 2022.
-The company has earned numerous awards and recognitions and including The Best of Bharat Awards 2022 by exchange4media in the year 2022, and Silver Medal from National Awards for Manufacturing Competitiveness Assessment 2021 instituted by International Research Institute for Manufacturing.
-Mankind has a pan-India marketing presence, with a field force of 11,691 medical representatives and 3,561 field managers, as of December 31, 2022. They operate 25 manufacturing facilities across India and had 4,121 manufacturing personnel as of December 31, 2022.
-As of December 31, 2022, the Company had a team of over 600 scientists and a dedicated in-house R&D center with four units located in IMT Manesar, Gurugram, Haryana and Thane, Maharashtra.
+    Nexus Select Trust is a retail REIT (Real Estate Investment Trust) that owns and operates high-quality shopping malls and other retail properties in India. It is sponsored by global investment firm Blackstone
+
+
+
+i. It has a portfolio of 17 operational shopping malls across 14 major cities, covering a 9.8 million square feet area. Some of its prominent properties include Select Citywalk in Delhi, Nexus Seawoods in Navi Mumbai, Nexus Koramangala in Bengaluru, Nexus Elante in Chandigarh, and Nexus Ahmedabad One in Ahmedabad.
+
+ii. It also owns two complementary hotel assets (354 keys), and three office assets of 1.3 million square feet as of December 31, 2022.
+
+iii. It has a diversified tenant base of over 1,000 national and international brands across around 3,000 stores. Some of its leading tenants are Apple, Zara, H&M, Uniqlo, Sephora, Superdry, Lifestyle, Shoppers Stop, Starbucks, McDonalds among others.
+
+iv. It generates income from leasing out retail space to various brands and tenants. It also enhances the value of its properties by investing in renovation, expansion and tenant mix optimization. It distributes at least 90% of its net distributable cash flow to its unit holders as dividends on a quarterly basis.
+
+v. It plans to double its portfolio in next 4-5 years through acquisition mode. It has a strong pipeline of potential acquisitions of over 10 million square feet across 12 cities.
   `,
     image: imageMappings.logoNexus,
     ipo_details: {

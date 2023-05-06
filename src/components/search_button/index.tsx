@@ -1,4 +1,4 @@
-import { styled } from "@nextui-org/react";
+import {styled} from "@nextui-org/react";
 
 export const SendButton = styled("button", {
   // reset button styles
@@ -38,7 +38,7 @@ export default function SearchButton() {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <rect width="40" height="40" rx="20" fill="#00CCFF" />
+        <rect width="40" height="40" rx="20" fill="#857fff" />
         <path
           fillRule="evenodd"
           clipRule="evenodd"

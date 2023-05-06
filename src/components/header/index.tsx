@@ -2,6 +2,7 @@ import Logo from "components/components/logo";
 import ThemeSwitch from "components/components/theme_switch";
 import ROUTES from "components/entities/routes";
 import Link from "next/link";
+import NavButtons from "../nav-buttons";
 
 
 export default function Header() {
@@ -11,7 +12,10 @@ export default function Header() {
       <Link href={ROUTES.HOME}>
         <Logo />
       </Link>
-      <ThemeSwitch />
+      <div className="flex md:flex-row">
+        <NavButtons />
+        <ThemeSwitch />
+      </div>
     </div>
   )
 }

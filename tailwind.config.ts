@@ -69,6 +69,7 @@ module.exports = {
       'image-bg': 'rgba(241,242,244, 0.5)',
 
       footerDiv: 'var(--nextui-colors-footerDiv)',
+      azure: 'var(--nextui-colors-azure)',
 
     },
     screens: {

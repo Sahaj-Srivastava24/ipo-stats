@@ -1,5 +1,5 @@
 const SunIcon = ({
-  fill = "currentColor",
+  fill = "#FDBD39",
   filled,
   ...props
 }) => {

@@ -45,7 +45,7 @@ export default function DetailedIPO() {
           </div>
           <div className="flex flex-col items-center gap-10 md:ml-10 md:items-start md:max-w-[60%]">
             <Text className={`text-center md:text-left text-[30px] md:text-[42px] leading-[30px] md:leading-[42px] font-[700] ${dm_sans.className} md:max-w-[60%]`} css={{color: '$textDark'}}>{data.name}</Text>
-            <Text className="text-[16px] leading-[24px] md:text-[12px] md:leading-[16px]" css={{color: '$textLight'}}>
+            <Text className="text-[16px] leading-[24px] md:text-[20px] md:leading-[26px]" css={{color: '$textLight'}}>
               {data.description}
             </Text>
           </div>
@@ -75,7 +75,7 @@ export default function DetailedIPO() {
         <Spacer y={1.5} />
 
         <DownloadButtons drhp={data.drhp} rhp={data.rhp} />
-        
+
         <Footer />
         <Feedback />
       </div>

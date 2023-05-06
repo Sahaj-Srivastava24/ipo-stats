@@ -20,7 +20,7 @@ export default function LandingView() {
               Welcome to
             </Text>
             <Text className={`text-center md:text-left text-[30px] md:text-[64px] leading-[30px] md:leading-[64px] font-[700] ${dm_sans.className}`} css={{color: '$textDark'}}>
-              INDIA’S FIRST
+              India’s first IPO platform
             </Text>
             <Text className="text-center md:text-left text-[16px] leading-[24px] font-[400] mt-10" css={{color: '$textLight'}}>
               Exclusive IPO data platform

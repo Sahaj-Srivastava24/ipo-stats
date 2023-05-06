@@ -6,16 +6,15 @@ import {ThemeProvider as NextThemesProvider} from 'next-themes';
 const lightTheme = createTheme({
   type: 'light',
   theme: {
-    fontSizes: {
-      
-    },
     colors: {
       backgroundLight: '#FFFFFF',
       backgroundDark: '#F4F5F6',
       textDark: '#23262F',
       textLight: '#777E90',
       ipoCardBackground: '#FFFFFF',
-      footerDiv: '#E6E8EC'
+      footerDiv: '#E6E8EC',
+
+      azure: 'rgba(11,0,255,0.5)'
     },
   }
 })
@@ -29,7 +28,9 @@ const darkTheme = createTheme({
       textDark: '#FCFCFD',
       textLight: '#777E90',
       ipoCardBackground: '#353945',
-      footerDiv: '#353945'
+      footerDiv: '#353945',
+      azure: 'rgba(11,0,255,0.5)'
+
     },
   }
 })

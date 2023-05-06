@@ -23,7 +23,7 @@ const poppins = Poppins({
 
 export default function DetailedIPO() {
   const router = useRouter()
-  const data = router.query.id === 'mankind' ? companies[0] : companies[1]
+  const data = Number(router.query.id) ? companies[Number(router.query.id)] : companies[0]
 
   return (
     <>
@@ -35,8 +35,10 @@ export default function DetailedIPO() {
       <div className={`${poppins.className} bg-backgroundLight`}>
         <Header />
         <div className="flex flex-col items-center md:flex-row gap-30 md:gap-10 mx-30 pb-30 mt-30 md:items-center">
-          <div className="md:w-[40%] flex items-center justify-center">
-            <Image src={data.image} alt="Company Image" width={300} height={200} className="h-200 w-full mx-20 md:mx-0 md:w-300 md:ml-30" />
+          <div className="w-full">
+            <div className="flex justify-center items-center mb-30 min-h-[120px] relative bg-image-bg rounded-[15px]">
+              <Image src={data.image} alt="Company Logo" fill style={{objectFit: 'contain'}} className="p-20" />
+            </div>
           </div>
           <div className="flex flex-col items-center gap-10 md:ml-10 md:items-start md:max-w-[60%]">
             <Text className={`text-center md:text-left text-[30px] md:text-[42px] leading-[30px] md:leading-[42px] font-[700] ${dm_sans.className} md:max-w-[60%]`} css={{color: '$textDark'}}>{data.name}</Text>

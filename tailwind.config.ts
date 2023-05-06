@@ -66,6 +66,7 @@ module.exports = {
       textLight: 'var(--nextui-colors-textLight)',
       backgroundLight: 'var(--nextui-colors-backgroundLight)',
       backgroundDark: 'var(--nextui-colors-backgroundDark)',
+      'image-bg': 'rgba(241,242,244, 0.5)',
 
       footerDiv: 'var(--nextui-colors-footerDiv)',
 

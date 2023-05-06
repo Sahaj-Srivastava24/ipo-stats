@@ -11,6 +11,8 @@ const dm_sans = DM_Sans({
 
 export default function LandingView() {
 
+
+
   return (
     <div className="pb-[40px] md:pb-[100px]">
       <Header />
@@ -34,6 +36,7 @@ export default function LandingView() {
               bordered
               placeholder="Search a company"
               color="default"
+              borderWeight='light'
               css={{'&:active': {border: '1px solid #777E90'}}}
               contentRight={
                 <SearchButton />

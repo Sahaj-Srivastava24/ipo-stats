@@ -1,7 +1,10 @@
+"use client"
+
 import {Button, Text} from "@nextui-org/react"
 import IPOCard from "components/components/ipo_card"
 import {type IPO} from "components/entities/listed-ipo"
 import {DM_Sans} from "next/font/google"
+import {useState} from "react"
 
 const dm_sans = DM_Sans({
   weight: '700',
@@ -12,6 +15,34 @@ const dm_sans = DM_Sans({
 export default function IPOCardWrapper(props: {heading: string, subheading: string, ipos: IPO[]}) {
   const wrapperCls = props.ipos.length < 3 ? 'flex mx-30 navLogo:justify-center md:mx-[80px] lg:mx-[140px]' : 'grid md:grid-cols-3 gap-[25px] mx-30 md:mx-[80px] lg:mx-[140px]'
   const innerCls = props.ipos.length < 3 ? 'navLogo:max-w-[50%] md:max-w-[35%]' : ''
+
+  const [showButton, setButton] = useState(props.ipos.length > 3)
+  const [showAll, setAll] = useState(() => {
+    if (props.ipos.length < 3)
+      return true
+    return false
+  })
+  const ipos = showAll ? props.ipos : props.ipos.slice(0, 3)
+
+  const handleClick = () => {
+    setTimeout(() => {
+      setAll(true)
+      setButton(false)
+    }, 100)
+  }
+
+  const IPOList = () => {
+    if (props.ipos.length < 0)
+      return <Text css={{textAlign: 'center'}}>There are no IPOs for the given category.</Text>
+
+    return (
+      <div className={wrapperCls}>
+        {ipos.map((ipo, idx) => <IPOCard ipo={ipo} key={idx} cls={innerCls} />)}
+      </div>
+    )
+  }
+
+
   return (
     <div className="py-20 md:pt-[50px] md:pb-[50px]">
       <div className="flex flex-col gap-10 items-center justify-center mx-30 pb-30">
@@ -20,18 +51,10 @@ export default function IPOCardWrapper(props: {heading: string, subheading: stri
           {props.subheading}
         </Text>
       </div>
-
-      {props.ipos.length > 0 ? (
-        <div className={wrapperCls}>
-          {props.ipos.map((ipo, idx) => <IPOCard ipo={ipo} key={idx} cls={innerCls} />)}
-        </div>
-      ) : (<Text css={{textAlign: 'center'}}>
-        There are no IPOs for the given category.
-      </Text>)}
-
-      {props.ipos.length > 3 && (
+      <IPOList />
+      {showButton && (
         <div className="flex justify-center mt-40">
-          <Button css={{backgroundColor: '#3772FF !important', borderRadius: '80px'}}>See more</Button>
+          <Button css={{backgroundColor: '#3772FF !important', borderRadius: '80px'}} onClick={handleClick}>See more</Button>
         </div>
       )}
     </div>

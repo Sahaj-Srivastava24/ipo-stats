@@ -7,7 +7,7 @@ export type IPO = {
   ipoDate: string;
   price: string;
   lotSize: string;
-  link?: string;
+  id: number;
 };
 
 export const LiveIPOs: IPO[] = [
@@ -18,6 +18,6 @@ export const LiveIPOs: IPO[] = [
     ipoDate: "May 9, 2023 to May 11, 2023",
     price: "₹95 to ₹100 per share",
     lotSize: "150 Shares",
-    link: "nexus",
+    id: 1,
   },
 ];

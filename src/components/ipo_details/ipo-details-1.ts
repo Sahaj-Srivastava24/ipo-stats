@@ -1,3 +1,4 @@
+import fileMappings from "components/entities/fileMappings";
 import imageMappings from "components/entities/imageMappings";
 
 type TIPODetails = {
@@ -66,8 +67,11 @@ type TCompanyFinancials = {
 type TCompany = {
   name: string;
   value: string;
+  drhp: string;
+  rhp: string;
   description: string;
   image: string;
+  risks: string[];
   ipo_details: TIPODetails;
   ipo_tentative_timetable: TIPOTimeTable;
   company_financials: TCompanyFinancials;
@@ -76,6 +80,8 @@ type TCompany = {
 export const companies: TCompany[] = [
   {
     name: "Mankind Pharma Limited",
+    drhp: fileMappings.drhpMankind,
+    rhp: fileMappings.rhpMankind,
     description: `
 Incorporated in 1991, Mankind Pharma Limited develops, manufactures, and markets pharmaceutical formulations across various acute and chronic therapeutic areas and several consumer healthcare products.
 In India, the business is active in a number of acute and chronic therapeutic fields, including anti-infectives, cardiovascular, gastrointestinal, anti-diabetic, neuro/CNS, vitamins/minerals/nutrients, and respiratory.
@@ -85,6 +91,22 @@ The company has earned numerous awards and recognitions and including The Best o
 Mankind has a pan-India marketing presence, with a field force of 11,691 medical representatives and 3,561 field managers, as of December 31, 2022. They operate 25 manufacturing facilities across India and had 4,121 manufacturing personnel as of December 31, 2022.
 As of December 31, 2022, the Company had a team of over 600 scientists and a dedicated in-house R&D center with four units located in IMT Manesar, Gurugram, Haryana and Thane, Maharashtra.
   `,
+    risks: [
+      `Any disruption, slowdown or shutdown in our manufacturing or research and development
+operations could adversely affect our business, financial condition, cash flows and results of
+operations.`,
+
+      `One of the brothers of our Promoters, Ramesh Juneja and Rajeev Juneja, who is deemed to be a part
+of the Promoter Group under the Securities and Exchange Board of India (Issue of Capital and
+Disclosure Requirements) Regulations, 2018 has not provided consent to be identified as a member
+of the Promoter Group and has not provided any information in respect of himself and his relevant
+entities as Promoter Group.`,
+
+      `Any delay, interruption or reduction in the supply of our raw materials or finished formulations from
+our third-party suppliers and manufacturers, or an increase in the costs of such raw materials and
+finished formulations, may adversely impact the pricing and supply of our products and have an
+adverse effect on our business, financial condition, cash flows and results of operations.`,
+    ],
     image: imageMappings.logoMankind,
     value: "In ₹ millions",
     ipo_details: {
@@ -242,6 +264,8 @@ As of December 31, 2022, the Company had a team of over 600 scientists and a ded
   {
     name: "Nexus Select Trust REIT",
     value: "In ₹ millions",
+    drhp: fileMappings.drhpMankind,
+    rhp: fileMappings.rhpMankind,
     description: `
     Nexus Select Trust is a retail REIT (Real Estate Investment Trust) that owns and operates high-quality shopping malls and other retail properties in India. It is sponsored by global investment firm Blackstone
 
@@ -257,6 +281,21 @@ iv. It generates income from leasing out retail space to various brands and tena
 
 v. It plans to double its portfolio in next 4-5 years through acquisition mode. It has a strong pipeline of potential acquisitions of over 10 million square feet across 12 cities.
   `,
+    risks: [
+      `The determination of the Price Band is based on various factors and assumptions, and the enterprise value
+(“EV”) to EBITDA ratio, market capitalization to tangible assets and market capitalization to revenue
+from operations ratio may not be indicative of the market price of the Equity Shares on listing or thereafter.`,
+
+      `Our manufacturing facilities are critical to our business. Any disruption in the continuous operations of
+our manufacturing facilities, including due to the COVID-19 pandemic, or a similar public health threat
+would have a material adverse effect on our business, results of operations and financial condition`,
+
+      `We source our raw material from suppliers, primarily on purchase order basis, who may not perform their
+contractual obligations in a timely manner, or at all. Any increase in the cost of our raw material or
+components, delay, shortage, interruption or reduction in the supply of raw materials and major
+production inputs to manufacture our products may adversely affect our business, results of operations,
+cash flows and financial condition.`,
+    ],
     image: imageMappings.logoNexus,
     ipo_details: {
       ipo_date: "May 9, 2023 to May 11, 2023",
@@ -414,6 +453,8 @@ v. It plans to double its portfolio in next 4-5 years through acquisition mode. 
   },
   {
     name: "Avalon Technologies Limited",
+    drhp: fileMappings.drhpAvalon,
+    rhp: fileMappings.rhpAvalon,
     description: `
     Incorporated in 1999, Avalon Technologies Limited is a leading fully integrated Electronic Manufacturing Services ("EMS") company. They have end-to-end capabilities in delivering box-build solutions in India, focusing on high-value precision engineered products. The company is one of the leaders in the segment in India in terms of revenue in Fiscal 2022.
 
@@ -423,6 +464,21 @@ v. It plans to double its portfolio in next 4-5 years through acquisition mode. 
     
     With its notable specialization in manufacturing and providing design support for critical integrated assemblies, sub-assemblies, components, and enclosures for multiple industry verticals, they help customers receive the best of services.
   `,
+    risks: [
+      `The determination of the Price Band is based on various factors and assumptions, and the enterprise value
+(“EV”) to EBITDA ratio, market capitalization to tangible assets and market capitalization to revenue
+from operations ratio may not be indicative of the market price of the Equity Shares on listing or thereafter.`,
+
+      `Our manufacturing facilities are critical to our business. Any disruption in the continuous operations of
+our manufacturing facilities, including due to the COVID-19 pandemic, or a similar public health threat
+would have a material adverse effect on our business, results of operations and financial condition`,
+
+      `We source our raw material from suppliers, primarily on purchase order basis, who may not perform their
+contractual obligations in a timely manner, or at all. Any increase in the cost of our raw material or
+components, delay, shortage, interruption or reduction in the supply of raw materials and major
+production inputs to manufacture our products may adversely affect our business, results of operations,
+cash flows and financial condition.`,
+    ],
     image: imageMappings.logoAvalon,
     value: "In ₹ millions",
     ipo_details: {
@@ -579,6 +635,8 @@ v. It plans to double its portfolio in next 4-5 years through acquisition mode. 
   },
   {
     name: "Divgi TorqTransfer Systems Limited",
+    drhp: fileMappings.drhpDigvi,
+    rhp: fileMappings.rhpDigvi,
     description: `
     Incorporated in 1964, Divgi TorqTransfer Systems Limited is engaged in the business as an automotive component entity. They are among the very few automotive component entities in India with the capability to develop and provide system-level transfer cases, torque couplers, and dual-clutch automatic transmission solutions.
 
@@ -598,6 +656,14 @@ v. It plans to double its portfolio in next 4-5 years through acquisition mode. 
     
     Divgi TorqTransfer Systems Limited also takes pride in being among the few companies that serve as both, systems-level solution providers and component kit suppliers to global OEMs and Tier I transmission systems suppliers.
   `,
+    risks: [
+      `Our business largely depends upon our top five customers, and the loss of such customers or a significant reduction in
+purchases by such customers will have a material adverse impact on our business.`,
+      `The geographical concentration of our exports to certain countries and the inability to operate and grow our business
+in such countries may have a material adverse effect on our business, financial condition, results of operations, cash
+flows and future business prospects.`,
+      `Our business could be adversely affected by volatility in the price or availability of raw materials and components.`
+    ],
     image: imageMappings.logoDigvi,
     value: "In ₹ millions",
     ipo_details: {
@@ -753,17 +819,27 @@ v. It plans to double its portfolio in next 4-5 years through acquisition mode. 
   },
   {
     name: "Global Surfaces Limited",
+    drhp: fileMappings.drhpGlobalSurface,
+    rhp: fileMappings.rhpMankind,
     description: `
-
-
     Incorporated in 1991, Global Surfaces Limited is engaged in processing natural stones and manufacturing engineered quartz.
-
     Natural stones are produced through complex geological processes and forms various products like granite, limestone, marble, slate, quartzite, onyx, sandstone, travertine, and others that are quarried from the earth.
-    
     The company has two units, one located at RIICO Industrial Area, Bagru Extn, Bagru, Jaipur, Rajasthan, and the other at Mahindra World City SEZ, Jaipur, Rajasthan. Both units engage in the processing and manufacturing of the products.
     
     The products of Global Surfaces Limited have applications in flooring, wall cladding, countertops, cut-to-size, and other items. The products are widely used for commercial and residential industries and are sold within and outside India.
   `,
+    risks: [
+      `The continuing impact of the COVID-19 pandemic on our business and operations is uncertain
+and it may be significant and continue to have an adverse effect on our business, operations
+and our future financial performance.`,
+      `We are dependent on a few customers for a major part of our revenues. Further we do
+not enter into long-term arrangements with our customers and any failure to continue our
+existing arrangements could adversely affect our business and results of operations.`,
+      `We do not have long-term agreements with our suppliers for raw materials and an inability to
+procure the desired quality, quantity of our raw materials in a timely manner and at reasonable
+costs, or at all, may have a negative impact on our business, results of operations, financial
+condition and cash flows.`
+    ],
     image: imageMappings.logoGlobalSurface,
     value: "In ₹ millions",
     ipo_details: {
@@ -921,19 +997,31 @@ v. It plans to double its portfolio in next 4-5 years through acquisition mode. 
   },
   {
     name: "Udayshivakumar Infra Limited",
+    drhp: fileMappings.drhpUdayshivakumar,
+    rhp: fileMappings.rhpUdayshivakumar,
     description: `
-
-
     Incorporated in 2019, Udayshivakumar Infra Limited is engaged in the business of the construction of roads.
-
     Udayshivakumar Infra Limited is an ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018 company. They construct roads including State Highways, District Roads, Smart Roads under Municipal Corporations, Smart Roads under PM's Smart City Mission projects, National Highways, Bruhat Bengaluru Mahanagara Palike (BBMP), and Local Area Roads in various Taluka Places, etc.
-    
     The company primarily operates in the State of Karnataka. They bid for Roads, Bridges, Irrigation & Canals Industrial Area construction in Karnataka, this includes National Highways (MORTH), State Highway Development Corporations Ltd., (SHDP), Government Departments such as Karnataka Public Works Ports & Inland Water Transport Department (KPWP & IWTD), Davanagere Harihara Urban Development Authority (DHUDA), and many more.
-    
     As of August 31, 2022, the Company had executed over 30 various projects in and around the State of Karnataka along with the erstwhile partnership firm, M/s. Udayshivakumar. The entity is working on twenty-five ongoing projects.
-    
     To gear up its operations and scale larger, the company is also looking to undertake projects in the joint venture with other infrastructure companies in industry.
   `,
+    risks: [
+      `Our business is concentrated in the State of Karnataka. We are primarily dependent on the projects
+undertaken or awarded in the state of Karnataka, by the Karnataka State Government, the local
+authorities /municipal bodies in the state of Karnataka and other entities funded by the Government of
+India or the Karnataka State Government. Therefore, we derive our entire revenues from contracts with
+a limited number of government entities and are exposed to risks emanating from economic, regulatory
+and other changes in the State of Karnataka. Any adverse changes in the central or state government
+policies may lead to our contracts being foreclosed, terminated, restructured or renegotiated, which may
+have a material effect on our business and results of operations.`,
+      `Our Company depends on the knowledge and experience of our Promoter, Udayshivakumar for our
+growth. The loss of their services may have a material adverse effect on our business, financial condition
+and results of operations.`,
+      `We derive a significant portion of our revenues from a limited number of clients. The loss of any significant
+clients may have an adverse effect on our business, financial condition, results of operations, and
+prospects.`
+    ],
     image: imageMappings.logoUdayshivakumar,
     value: "In lakhs",
     ipo_details: {

@@ -1,13 +1,16 @@
-import {Text} from "@nextui-org/react";
+import {Card, Spacer, Text} from "@nextui-org/react";
 import IPODetailsTable from "components/components/detailed-ipo/IPODetailsTable";
 import IPOTables from "components/components/detailed-ipo/IPOTable";
+import DownloadButtons from "components/components/download_buttons";
 import Feedback from "components/components/feedback";
 import Footer from "components/components/footer";
 import Header from "components/components/header";
 import {companies} from "components/components/ipo_details/ipo-details-1";
+import imageMappings from "components/entities/imageMappings";
 import {DM_Sans, Poppins} from "next/font/google";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import {useRouter} from 'next/router'
 
 
@@ -57,6 +60,22 @@ export default function DetailedIPO() {
             <IPOTables companyFinances={data.company_financials} />
           </div>
         </div>
+
+        <Spacer y={1.5} />
+
+        <div className="flex flex-col gap-20 mx-20 navLogo:mx-30 md:mx-[80px]">
+          <Text className={`text-center md:text-left text-[24px] md:text-[32px] leading-[24px] md:leading-[32px] font-[700] mb-20 pl-10 ${dm_sans.className}`} css={{color: '$textDark'}}>Internal Risks</Text>
+          {data.risks.map((risk, idx) => {
+            return (
+              <Text key={idx} className="pl-20">{risk}</Text>
+            )
+          })}
+        </div>
+
+        <Spacer y={1.5} />
+
+        <DownloadButtons drhp={data.drhp} rhp={data.rhp} />
+        
         <Footer />
         <Feedback />
       </div>

@@ -8,7 +8,7 @@ type TIPODetails = {
   lot_size: string;
   fresh_issue?: string;
   total_issue_size: string;
-  offer_for_sale: string;
+  offer_for_sale?: string;
   issue_type: string;
   listing_at: string;
 };
@@ -28,13 +28,13 @@ type TCompanyFinancials = {
     columns: string[];
     records: {
       "As at": string;
-      "Total Non-Current Assets": string;
-      "Total Current Assets": string;
+      "Total Non-Current Assets"?: string;
+      "Total Current Assets"?: string;
       "Total Assets": string;
-      "Total Equity": string;
-      "Total Non-Current Liabilities": string;
-      "Total Current Liabilities": string;
-      "Total Liabilities": string;
+      "Total Equity"?: string;
+      "Total Non-Current Liabilities"?: string;
+      "Total Current Liabilities"?: string;
+      "Total Liabilities"?: string;
       "Total Equity and Liabilities": string;
     }[];
   };
@@ -412,28 +412,663 @@ v. It plans to double its portfolio in next 4-5 years through acquisition mode. 
       },
     },
   },
-  // {
-  //   name: "Avalon Technologies Limited",
-  //   ipo_details: {
-  //     ipo_date: "Apr 3, 2023 to Apr 6, 2023",
-  //     listing_date: "Apr 18, 2023",
-  //     face_value: "₹2 per share",
-  //     price: "₹415 to ₹436 per share",
-  //     lot_size: "34 Shares",
-  //     total_issue_size: "19,839,450 shares (aggregating up to ₹865.00 Cr)",
-  //     fresh_issue: "7,339,450 shares (aggregating up to ₹320.00 Cr)",
-  //     offer_for_sale: "12,500,000 shares of ₹2 (aggregating up to ₹545.00 Cr)",
-  //     issue_type: "Book Built Issue IPO",
-  //     listing_at: "BSE, NSE",
-  //   },
-  //   ipo_tentative_timetable: {
-  //     opening_date: "Apr 3, 2023",
-  //     closing_date: "Apr 6, 2023",
-  //     basis_of_allotment: "Apr 12, 2023",
-  //     initiation_of_refunds: "Apr 13, 2023",
-  //     credit_of_shares_to_demat: "Apr 17, 2023",
-  //     listing_date: "Apr 18, 2023",
-  //     upi_mandate_confirmation_cut_off_time: "5.00 PM on the issue closing day",
-  //   },
-  // },
+  {
+    name: "Avalon Technologies Limited",
+    description: `
+    Incorporated in 1999, Avalon Technologies Limited is a leading fully integrated Electronic Manufacturing Services ("EMS") company. They have end-to-end capabilities in delivering box-build solutions in India, focusing on high-value precision engineered products. The company is one of the leaders in the segment in India in terms of revenue in Fiscal 2022.
+
+    Through a unique global delivery model, Avalon offers a full stack product and solution suite, right from printed circuit board (PCB) design and assembly to the manufacture of complete electronic systems (Box Build), to certain global original equipment manufacturers (OEMs), including OEMs located in countries like China, Netherlands, United States, and Japan.
+    
+    The offerings of Avalon Technologies Limited include PCB design and assembly, cable assembly and wire harnesses, sheet metal fabrication and machining, magnetics, injection molded plastics, and end-to-end box build of electronic systems.
+    
+    With its notable specialization in manufacturing and providing design support for critical integrated assemblies, sub-assemblies, components, and enclosures for multiple industry verticals, they help customers receive the best of services.
+  `,
+    image: imageMappings.logoAvalon,
+    value: "In ₹ millions",
+    ipo_details: {
+      ipo_date: "Apr 3, 2023 to Apr 6, 2023",
+      listing_date: "Apr 18, 2023",
+      face_value: "₹2 per share",
+      price: "₹415 to ₹436 per share",
+      lot_size: "34 Shares",
+      total_issue_size: "19,839,450 shares ",
+      fresh_issue: "7,339,450 shares (36.99%)",
+      offer_for_sale: "12,500,000 shares of ₹2 (63.01%)",
+      issue_type: "Book Built Issue IPO",
+      listing_at: "BSE, NSE",
+    },
+    ipo_tentative_timetable: {
+      opening_date: "Apr 3, 2023",
+      closing_date: "Apr 6, 2023",
+      basis_of_allotment: "Apr 12, 2023",
+      initiation_of_refunds: "Apr 13, 2023",
+      credit_of_shares_to_demat: "Apr 17, 2023",
+      listing_date: "Apr 18, 2023",
+      upi_mandate_confirmation_cut_off_time: "5.00 PM on the issue closing day",
+    },
+    company_financials: {
+      assets: {
+        columns: [
+          "As at",
+          "Total Non-Current Assets",
+          "Total Current Assets",
+          "Total Assets",
+          "Total Equity",
+          "Total Non-Current Liabilities",
+          "Total Current Liabilities",
+          "Total Liabilities",
+          "Total Equity and Liabilities",
+        ],
+        records: [
+          {
+            "As at": "March 31, 2022",
+            "Total Non-Current Assets": "1,376.76",
+            "Total Current Assets": "4,502.86",
+            "Total Assets": "5,879.62",
+            "Total Equity": "871.91",
+            "Total Non-Current Liabilities": "1,017.57",
+            "Total Current Liabilities": "3,990.14",
+            "Total Liabilities": "5,007.71",
+            "Total Equity and Liabilities": "5,879.62",
+          },
+          {
+            "As at": "March 31, 2021",
+            "Total Non-Current Assets": "1,328.73",
+            "Total Current Assets": "3,796.11",
+            "Total Assets": "5,124.84",
+            "Total Equity": "282.08",
+            "Total Non-Current Liabilities": "1,051.09",
+            "Total Current Liabilities": "3,791.67",
+            "Total Liabilities": "4,842.76",
+            "Total Equity and Liabilities": "5,124.84",
+          },
+          {
+            "As at": "March 31, 2020",
+            "Total Non-Current Assets": "1,369.91",
+            "Total Current Assets": "3,126.58",
+            "Total Assets": "4,496.49",
+            "Total Equity": "34.46",
+            "Total Non-Current Liabilities": "792.13",
+            "Total Current Liabilities": "3,669.90",
+            "Total Liabilities": "4,462.03",
+            "Total Equity and Liabilities": "4,496.49",
+          },
+        ],
+      },
+      profit_loss: {
+        columns: [
+          "As at",
+          "Total Income",
+          "Total Expenses",
+          "Profit Before Tax",
+          "Total Tax Expense",
+          "Profit for the period",
+        ],
+        records: [
+          {
+            "As at": "March 31, 2022",
+            "Total Income": "8,516.50",
+            "Total Expenses": "7,852.09",
+            "Profit Before Tax": "864.31",
+            "Total Tax Expense": "182.67",
+            "Profit for the period": "681.64",
+          },
+          {
+            "As at": "March 31, 2021",
+            "Total Income": "6,958.97",
+            "Total Expenses": "6,670.68",
+            "Profit Before Tax": "288.29",
+            "Total Tax Expense": "57.47",
+            "Profit for the period": "230.82",
+          },
+          {
+            "As at": "March 31, 2020",
+            "Total Income": "6,531.48",
+            "Total Expenses": "6,378.53",
+            "Profit Before Tax": "152.95",
+            "Total Tax Expense": "29.69",
+            "Profit for the period": "123.26",
+          },
+        ],
+      },
+      cash_flow: {
+        columns: [
+          "As at",
+          "Net cash inflow from operating activities (A)",
+          "Net cash outflow from investing activities (B)",
+          "Net cash inflow/(outflow) from financing activities (C)",
+          "Net foreign exchange difference",
+          "Cash and cash equivalents at the beginning of the period/ year",
+          "Cash and cash equivalents at period/ year end",
+        ],
+        records: [
+          {
+            "As at": "March 31, 2022",
+            "Net cash inflow from operating activities (A)": "138.59",
+            "Net cash outflow from investing activities (B)": "-165.69",
+            "Net cash inflow/(outflow) from financing activities (C)":
+              "-208.36",
+            "Net foreign exchange difference": "-0.33",
+            "Cash and cash equivalents at the beginning of the period/ year":
+              "313.38",
+            "Cash and cash equivalents at period/ year end": "77.59",
+          },
+          {
+            "As at": "March 31, 2021",
+            "Net cash inflow from operating activities (A)": "55.16",
+            "Net cash outflow from investing activities (B)": "-262.62",
+            "Net cash inflow/(outflow) from financing activities (C)": "279.64",
+            "Net foreign exchange difference": "-4.73",
+            "Cash and cash equivalents at the beginning of the period/ year":
+              "245.93",
+            "Cash and cash equivalents at period/ year end": "313.38",
+          },
+          {
+            "As at": "March 31, 2020",
+            "Net cash inflow from operating activities (A)": "657.25",
+            "Net cash outflow from investing activities (B)": "-192.70",
+            "Net cash inflow/(outflow) from financing activities (C)": "0.88",
+            "Net foreign exchange difference": "36.04",
+            "Cash and cash equivalents at the beginning of the period/ year":
+              "203.92",
+            "Cash and cash equivalents at period/ year end": "245.93",
+          },
+        ],
+      },
+    },
+  },
+  {
+    name: "Divgi TorqTransfer Systems Limited",
+    description: `
+    Incorporated in 1964, Divgi TorqTransfer Systems Limited is engaged in the business as an automotive component entity. They are among the very few automotive component entities in India with the capability to develop and provide system-level transfer cases, torque couplers, and dual-clutch automatic transmission solutions.
+
+    Divgi TorqTransfer is one of the leading players supplying transfer case systems to automotive OEMs in India and the largest supplier of transfer case systems to passenger vehicle manufacturers in India. Not only thi are also the only player manufacturing and exporting transfer cases to global OEMs from India, and the only manufacturer of torque couplers in India.
+    
+    Divgi TorqTransfer Systems Limited manufactures and supplies its products under a wide range which includes-
+    
+        Torque transfer systems (which includes four-wheel-drive ("4WD") and all-wheel-drive ("AWD") products);
+        Synchronizer systems for manual transmissions and DCT;
+        Components for the above-mentioned product categories for torque transfer systems and synchronizer systems in manual transmission, DCT, and EVs.
+    
+    Alongside, they have also developed
+    
+        Transmission systems for EVs;
+        DCT systems;
+        Rear wheel drive manual transmissions.
+    
+    Divgi TorqTransfer Systems Limited also takes pride in being among the few companies that serve as both, systems-level solution providers and component kit suppliers to global OEMs and Tier I transmission systems suppliers.
+  `,
+    image: imageMappings.logoDigvi,
+    value: "In ₹ millions",
+    ipo_details: {
+      ipo_date: "Mar 1, 2023 to Mar 3, 2023",
+      listing_date: "Mar 14, 2023",
+      face_value: "₹5 per share",
+      price: "₹560 to ₹590 per share",
+      lot_size: "25 Shares",
+      total_issue_size: "[.] shares",
+      fresh_issue: "[.] shares",
+      offer_for_sale: "3,934,243 shares of ₹5 ",
+      issue_type: "Book Built Issue IPO",
+      listing_at: "BSE, NSE",
+    },
+    ipo_tentative_timetable: {
+      opening_date: "Mar 1, 2023",
+      closing_date: "Mar 3, 2023",
+      basis_of_allotment: "Mar 9, 2023",
+      initiation_of_refunds: "Mar 10, 2023",
+      credit_of_shares_to_demat: "Mar 13, 2023",
+      listing_date: "Mar 14, 2023",
+      upi_mandate_confirmation_cut_off_time: "5.00 PM on the issue closing day",
+    },
+    company_financials: {
+      assets: {
+        columns: [
+          "As at",
+          "Total Non-Current Assets",
+          "Total Current Assets",
+          "Total Assets",
+          "Total Equity",
+          "Total Non-Current Liabilities",
+          "Total Current Liabilities",
+          "Total Liabilities",
+          "Total Equity and Liabilities",
+        ],
+        records: [
+          {
+            "As at": "March 31, 2022",
+            "Total Non-Current Assets": "1,418.25",
+            "Total Current Assets": "2,635.45",
+            "Total Assets": "4,053.70",
+            "Total Equity": "3,400.15",
+            "Total Non-Current Liabilities": "54.79",
+            "Total Current Liabilities": "598.76",
+            "Total Liabilities": "653.55",
+            "Total Equity and Liabilities": "4,053.70",
+          },
+          {
+            "As at": "March 31, 2021",
+            "Total Non-Current Assets": "1,132.71",
+            "Total Current Assets": "2,496.11",
+            "Total Assets": "3,628.82",
+            "Total Equity": "2,958.76",
+            "Total Non-Current Liabilities": "60.14",
+            "Total Current Liabilities": "609.92",
+            "Total Liabilities": "670.06",
+            "Total Equity and Liabilities": "3,628.82",
+          },
+          {
+            "As at": "March 31, 2020",
+            "Total Non-Current Assets": "990.67",
+            "Total Current Assets": "2,046.33",
+            "Total Assets": "3,037.00",
+            "Total Equity": "2,095.33",
+            "Total Non-Current Liabilities": "55.45",
+            "Total Current Liabilities": "886.22",
+            "Total Liabilities": "941.67",
+            "Total Equity and Liabilities": "3,037.00",
+          },
+        ],
+      },
+      profit_loss: {
+        columns: [
+          "As at",
+          "Total Income",
+          "Total Expenses",
+          "Profit Before Tax",
+          "Total Tax Expense",
+          "Profit for the period",
+        ],
+        records: [
+          {
+            "As at": "March 31, 2022",
+            "Total Income": "2,418.74",
+            "Total Expenses": "1,797.21",
+            "Profit Before Tax": "621.53",
+            "Total Tax Expense": "160.02",
+            "Profit for the period": "461.51",
+          },
+          {
+            "As at": "March 31, 2021",
+            "Total Income": "1,950.25",
+            "Total Expenses": "1,424.69",
+            "Profit Before Tax": "525.56",
+            "Total Tax Expense": "145.12",
+            "Profit for the period": "380.44",
+          },
+          {
+            "As at": "March 31, 2020",
+            "Total Income": "1,707.40",
+            "Total Expenses": "1,329.78",
+            "Profit Before Tax": "377.62",
+            "Total Tax Expense": "97.23",
+            "Profit for the period": "280.39",
+          },
+        ],
+      },
+      cash_flow: {
+        columns: [
+          "As at",
+          "Net cash inflow from operating activities (A)",
+          "Net cash outflow from investing activities (B)",
+          "Net cash inflow/(outflow) from financing activities (C)",
+          "Net foreign exchange difference",
+          "Cash and cash equivalents at the beginning of the period/ year",
+          "Cash and cash equivalents at period/ year end",
+        ],
+        records: [
+          {
+            "As at": "March 31, 2022",
+            "Net cash inflow from operating activities (A)": "510.77",
+            "Net cash outflow from investing activities (B)": "-510.78",
+            "Net cash inflow/(outflow) from financing activities (C)": "-29.33",
+            "Net foreign exchange difference": "0.00",
+            "Cash and cash equivalents at the beginning of the period/ year":
+              "202.87",
+            "Cash and cash equivalents at period/ year end": "173.53",
+          },
+          {
+            "As at": "March 31, 2021",
+            "Net cash inflow from operating activities (A)": "269.65",
+            "Net cash outflow from investing activities (B)": "-245.78",
+            "Net cash inflow/(outflow) from financing activities (C)": "-26.23",
+            "Net foreign exchange difference": "0.00",
+            "Cash and cash equivalents at the beginning of the period/ year":
+              "205.23",
+            "Cash and cash equivalents at period/ year end": "202.87",
+          },
+          {
+            "As at": "March 31, 2020",
+            "Net cash inflow from operating activities (A)": "383.29",
+            "Net cash outflow from investing activities (B)": "-243.06",
+            "Net cash inflow/(outflow) from financing activities (C)": "-57.51",
+            "Net foreign exchange difference": "0.00",
+            "Cash and cash equivalents at the beginning of the period/ year":
+              "122.51",
+            "Cash and cash equivalents at period/ year end": "205.23",
+          },
+        ],
+      },
+    },
+  },
+  {
+    name: "Global Surfaces Limited",
+    description: `
+
+
+    Incorporated in 1991, Global Surfaces Limited is engaged in processing natural stones and manufacturing engineered quartz.
+
+    Natural stones are produced through complex geological processes and forms various products like granite, limestone, marble, slate, quartzite, onyx, sandstone, travertine, and others that are quarried from the earth.
+    
+    The company has two units, one located at RIICO Industrial Area, Bagru Extn, Bagru, Jaipur, Rajasthan, and the other at Mahindra World City SEZ, Jaipur, Rajasthan. Both units engage in the processing and manufacturing of the products.
+    
+    The products of Global Surfaces Limited have applications in flooring, wall cladding, countertops, cut-to-size, and other items. The products are widely used for commercial and residential industries and are sold within and outside India.
+  `,
+    image: imageMappings.logoGlobalSurface,
+    value: "In ₹ millions",
+    ipo_details: {
+      ipo_date: "Mar 13, 2023 to Mar 15, 2023",
+      listing_date: "Mar 23, 2023",
+      face_value: "₹10 per share",
+      price: "₹133 to ₹140 per share",
+      lot_size: "100 Shares",
+      total_issue_size: "11,070,000 shares ",
+      fresh_issue: "8,520,000 shares (77%)",
+      offer_for_sale: "2,550,000 shares of ₹10 (23%)",
+      issue_type: "Book Built Issue IPO",
+      listing_at: "BSE, NSE",
+    },
+    ipo_tentative_timetable: {
+      opening_date: "Mar 13, 2023",
+      closing_date: "Mar 15, 2023",
+      basis_of_allotment: "Mar 20, 2023",
+      initiation_of_refunds: "Mar 21, 2023",
+      credit_of_shares_to_demat: "Mar 22, 2023",
+      listing_date: "Mar 23, 2023",
+      upi_mandate_confirmation_cut_off_time: "5.00 PM on the issue closing day",
+    },
+    company_financials: {
+      assets: {
+        columns: [
+          "As at",
+          "Total Non-Current Assets",
+          "Total Current Assets",
+          "Total Assets",
+          "Total Equity",
+          "Total Non-Current Liabilities",
+          "Total Current Liabilities",
+          "Total Liabilities",
+          "Total Equity and Liabilities",
+        ],
+        records: [
+          {
+            "As at": "March 31, 2022",
+            "Total Non-Current Assets": "1,202.84",
+            "Total Current Assets": "1,161.98",
+            "Total Assets": "2,364.82",
+            "Total Equity": "1,340.35",
+            "Total Non-Current Liabilities": "533.26",
+            "Total Current Liabilities": "491.21",
+            "Total Liabilities": "1,024.47",
+            "Total Equity and Liabilities": "2,364.82",
+          },
+          {
+            "As at": "March 31, 2021",
+            "Total Non-Current Assets": "713.20",
+            "Total Current Assets": "876.77",
+            "Total Assets": "1,589.97",
+            "Total Equity": "984.34",
+            "Total Non-Current Liabilities": "76.77",
+            "Total Current Liabilities": "528.86",
+            "Total Liabilities": "605.63",
+            "Total Equity and Liabilities": "1,589.97",
+          },
+          {
+            "As at": "March 31, 2020",
+            "Total Non-Current Assets": "697.69",
+            "Total Current Assets": "589.60",
+            "Total Assets": "1,287.29",
+            "Total Equity": "644.84",
+            "Total Non-Current Liabilities": "142.59",
+            "Total Current Liabilities": "499.86",
+            "Total Liabilities": "642.45",
+            "Total Equity and Liabilities": "1,287.29",
+          },
+        ],
+      },
+      profit_loss: {
+        columns: [
+          "As at",
+          "Total Income",
+          "Total Expenses",
+          "Profit Before Tax",
+          "Total Tax Expense",
+          "Profit for the period",
+        ],
+        records: [
+          {
+            "As at": "March 31, 2022",
+            "Total Income": "1,983.57",
+            "Total Expenses": "1,622.51",
+            "Profit Before Tax": "361.06",
+            "Total Tax Expense": "4.72",
+            "Profit for the period": "356.34",
+          },
+          {
+            "As at": "March 31, 2021",
+            "Total Income": "1,790.04",
+            "Total Expenses": "1,444.74",
+            "Profit Before Tax": "345.30",
+            "Total Tax Expense": "5.98",
+            "Profit for the period": "339.32",
+          },
+          {
+            "As at": "March 31, 2020",
+            "Total Income": "1,657.80",
+            "Total Expenses": "1,450.59",
+            "Profit Before Tax": "207.21",
+            "Total Tax Expense": "-2.43",
+            "Profit for the period": "209.64",
+          },
+        ],
+      },
+      cash_flow: {
+        columns: [
+          "As at",
+          "Net cash inflow from operating activities (A)",
+          "Net cash outflow from investing activities (B)",
+          "Net cash inflow/(outflow) from financing activities (C)",
+          "Net foreign exchange difference",
+          "Cash and cash equivalents at the beginning of the period/ year",
+          "Cash and cash equivalents at period/ year end",
+        ],
+        records: [
+          {
+            "As at": "March 31, 2022",
+            "Net cash inflow from operating activities (A)": "281.90",
+            "Net cash outflow from investing activities (B)": "-281.37",
+            "Net cash inflow/(outflow) from financing activities (C)": "-34.63",
+            "Net foreign exchange difference": "0.00",
+            "Cash and cash equivalents at the beginning of the period/ year":
+              "54.44",
+            "Cash and cash equivalents at period/ year end": "20.34",
+          },
+          {
+            "As at": "March 31, 2021",
+            "Net cash inflow from operating activities (A)": "321.44",
+            "Net cash outflow from investing activities (B)": "-79.63",
+            "Net cash inflow/(outflow) from financing activities (C)":
+              "-193.14",
+            "Net foreign exchange difference": "0.00",
+            "Cash and cash equivalents at the beginning of the period/ year":
+              "5.77",
+            "Cash and cash equivalents at period/ year end": "54.44",
+          },
+          {
+            "As at": "March 31, 2020",
+            "Net cash inflow from operating activities (A)": "536.88",
+            "Net cash outflow from investing activities (B)": "-105.23",
+            "Net cash inflow/(outflow) from financing activities (C)":
+              "-456.81",
+            "Net foreign exchange difference": "0.00",
+            "Cash and cash equivalents at the beginning of the period/ year":
+              "30.93",
+            "Cash and cash equivalents at period/ year end": "5.77",
+          },
+        ],
+      },
+    },
+  },
+  {
+    name: "Udayshivakumar Infra Limited",
+    description: `
+
+
+    Incorporated in 2019, Udayshivakumar Infra Limited is engaged in the business of the construction of roads.
+
+    Udayshivakumar Infra Limited is an ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018 company. They construct roads including State Highways, District Roads, Smart Roads under Municipal Corporations, Smart Roads under PM's Smart City Mission projects, National Highways, Bruhat Bengaluru Mahanagara Palike (BBMP), and Local Area Roads in various Taluka Places, etc.
+    
+    The company primarily operates in the State of Karnataka. They bid for Roads, Bridges, Irrigation & Canals Industrial Area construction in Karnataka, this includes National Highways (MORTH), State Highway Development Corporations Ltd., (SHDP), Government Departments such as Karnataka Public Works Ports & Inland Water Transport Department (KPWP & IWTD), Davanagere Harihara Urban Development Authority (DHUDA), and many more.
+    
+    As of August 31, 2022, the Company had executed over 30 various projects in and around the State of Karnataka along with the erstwhile partnership firm, M/s. Udayshivakumar. The entity is working on twenty-five ongoing projects.
+    
+    To gear up its operations and scale larger, the company is also looking to undertake projects in the joint venture with other infrastructure companies in industry.
+  `,
+    image: imageMappings.logoUdayshivakumar,
+    value: "In lakhs",
+    ipo_details: {
+      ipo_date: "Mar 20, 2023 to Mar 23, 2023",
+      listing_date: "Apr 3, 2023",
+      face_value: "₹10 per share",
+      price: "₹33 to ₹35 per share",
+      lot_size: "428 Shares",
+      total_issue_size: "20,000,000 shares",
+      fresh_issue: "20,000,000 shares (100%) ",
+      issue_type: "Book Built Issue IPO",
+      listing_at: "BSE, NSE",
+    },
+    ipo_tentative_timetable: {
+      opening_date: "Mar 20, 2023",
+      closing_date: "Mar 23, 2023",
+      basis_of_allotment: "Mar 28, 2023",
+      initiation_of_refunds: "Mar 29, 2023",
+      credit_of_shares_to_demat: "Mar 31, 2023",
+      listing_date: "Apr 3, 2023",
+      upi_mandate_confirmation_cut_off_time: "5.00 PM on the issue closing day",
+    },
+    company_financials: {
+      assets: {
+        columns: [
+          "As at",
+          "Total Non-Current Assets",
+          "Total Current Assets",
+          "Total Assets",
+          "Total Equity",
+          "Total Non-Current Liabilities",
+          "Total Current Liabilities",
+          "Total Liabilities",
+          "Total Equity and Liabilities",
+        ],
+        records: [
+          {
+            "As at": "March 31, 2022",
+            "Total Assets": "16,261.25",
+            "Total Equity and Liabilities": "16,261.25",
+          },
+          {
+            "As at": "March 31, 2021",
+            "Total Assets": "14,681.73",
+            "Total Equity and Liabilities": "14,681.73",
+          },
+          {
+            "As at": "March 31, 2020",
+            "Total Assets": "15,826.08",
+            "Total Equity and Liabilities": "15,826.08",
+          },
+        ],
+      },
+      profit_loss: {
+        columns: [
+          "As at",
+          "Total Income",
+          "Total Expenses",
+          "Profit Before Tax",
+          "Total Tax Expense",
+          "Profit for the period",
+        ],
+        records: [
+          {
+            "As at": "March 31, 2022",
+            "Total Income": "18,638.81",
+            "Total Expenses": "17,037.44",
+            "Profit Before Tax": "1,601.37",
+            "Total Tax Expense": "386.56",
+            "Profit for the period": "1,214.81",
+          },
+          {
+            "As at": "March 31, 2021",
+            "Total Income": "21,110.82",
+            "Total Expenses": "19,753.23",
+            "Profit Before Tax": "1,231.67",
+            "Total Tax Expense": "300.98",
+            "Profit for the period": "931.69",
+          },
+          {
+            "As at": "March 31, 2020",
+            "Total Income": "19,440.50",
+            "Total Expenses": "18,021.98",
+            "Profit Before Tax": "1,418.52",
+            "Total Tax Expense": "369.80",
+            "Profit for the period": "1,048.72",
+          },
+        ],
+      },
+      cash_flow: {
+        columns: [
+          "As at",
+          "Net cash inflow from operating activities (A)",
+          "Net cash outflow from investing activities (B)",
+          "Net cash inflow/(outflow) from financing activities (C)",
+          "Net foreign exchange difference",
+          "Cash and cash equivalents at the beginning of the period/ year",
+          "Cash and cash equivalents at period/ year end",
+        ],
+        records: [
+          {
+            "As at": "March 31, 2022",
+            "Net cash inflow from operating activities (A)": "3,198.64",
+            "Net cash outflow from investing activities (B)": "-1,669.81",
+            "Net cash inflow/(outflow) from financing activities (C)":
+              "-529.71",
+            "Net foreign exchange difference": "0.00",
+            "Cash and cash equivalents at the beginning of the period/ year":
+              "525.02",
+            "Cash and cash equivalents at period/ year end": "1,524.15",
+          },
+          {
+            "As at": "March 31, 2021",
+            "Net cash inflow from operating activities (A)": "1,720.47",
+            "Net cash outflow from investing activities (B)": "147.85",
+            "Net cash inflow/(outflow) from financing activities (C)":
+              "-1,367.81",
+            "Net foreign exchange difference": "0.00",
+            "Cash and cash equivalents at the beginning of the period/ year":
+              "24.51",
+            "Cash and cash equivalents at period/ year end": "525.02",
+          },
+          {
+            "As at": "March 31, 2020",
+            "Net cash inflow from operating activities (A)": "2,141.63",
+            "Net cash outflow from investing activities (B)": "-680.20",
+            "Net cash inflow/(outflow) from financing activities (C)":
+              "-1,492.65",
+            "Net foreign exchange difference": "0.00",
+            "Cash and cash equivalents at the beginning of the period/ year":
+              "55.73",
+            "Cash and cash equivalents at period/ year end": "24.51",
+          },
+        ],
+      },
+    },
+  },
 ];

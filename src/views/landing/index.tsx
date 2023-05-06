@@ -10,9 +10,6 @@ const dm_sans = DM_Sans({
 })
 
 export default function LandingView() {
-
-
-
   return (
     <div className="pb-[40px] md:pb-[100px]">
       <Header />

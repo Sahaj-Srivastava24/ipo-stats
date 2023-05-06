@@ -20,10 +20,10 @@ export default function LandingView() {
         <div className="flex flex-col gap-[30px] justify-around">
           <div className="flex flex-col gap-[10px]">
             <Text className="text-center md:text-left uppercase font-[700] text-[12px] md:text-[16px] leading-[12px] md:leading-[16px]" css={{color: '$textLight'}}>
-              Let us summarize what&apos;s happening
+              Welcome to
             </Text>
             <Text className={`text-center md:text-left text-[30px] md:text-[64px] leading-[30px] md:leading-[64px] font-[700] ${dm_sans.className}`} css={{color: '$textDark'}}>
-              India’s first IPO platform
+              INDIA’S FIRST
             </Text>
             <Text className="text-center md:text-left text-[16px] leading-[24px] font-[400] mt-10" css={{color: '$textLight'}}>
               Exclusive IPO data platform
@@ -33,11 +33,10 @@ export default function LandingView() {
           <div className="flex justify-center md:justify-start">
             <Input
               rounded
-              bordered
+              animated={false}
               placeholder="Search a company"
               color="default"
               borderWeight='light'
-              css={{'&:active': {border: '1px solid #777E90'}}}
               contentRight={
                 <SearchButton />
               }

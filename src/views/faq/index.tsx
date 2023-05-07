@@ -15,7 +15,7 @@ export default function FAQView() {
   const [tab, setTab] = useState(0)
   const tabKeys = Object.keys(FAQs)
   return (
-    <div className="pt-[100px] mx-[20px] md:mx-[70px]">
+    <div className="pt-[100px] mx-[20px] md:mx-[70px]" id="faqs">
       <div className="md:max-w-[60%] mb-[60px]">
         <div className="flex flex-col gap-[10px]">
           <Text className="text-center md:text-left uppercase font-[700] text-[12px] md:text-[16px] leading-[12px] md:leading-[16px]" css={{color: '$textLight'}}>

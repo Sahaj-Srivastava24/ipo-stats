@@ -1,6 +1,6 @@
 import "components/styles/globals.css";
 import {type AppType} from "next/dist/shared/lib/utils";
-import {createTheme, NextUIProvider} from '@nextui-org/react';
+import {createTheme, NextUIProvider, useSSR} from '@nextui-org/react';
 import {ThemeProvider as NextThemesProvider} from 'next-themes';
 
 const lightTheme = createTheme({
@@ -36,8 +36,9 @@ const darkTheme = createTheme({
 })
 
 const MyApp: AppType = ({Component, pageProps}) => {
+  const {isBrowser} = useSSR()
 
-  return (
+  return isBrowser && (
     <NextThemesProvider
       defaultTheme="system"
       attribute="class"

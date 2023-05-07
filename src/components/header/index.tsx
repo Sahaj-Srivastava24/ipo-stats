@@ -8,9 +8,13 @@ import {Navbar, Button, Text} from "@nextui-org/react";
 
 
 export default function Header() {
+  const navCss = {bg: 'transparent'}
+  const navContainerCss = {
+    bg: 'transparent !important', backdropFilter: 'none !important', '@xs': {px: '20px'}, '@sm': {px: '50px'}
+  }
 
   return (
-    <Navbar css={{bgColor: '$backgroundight'}} containerCss={{'@xs': {px: '20px'}, '@sm': {px: '50px'}}} maxWidth='fluid'>
+    <Navbar disableShadow css={navCss} containerCss={navContainerCss} maxWidth='fluid' >
       <Navbar.Brand>
         <Link href={ROUTES.HOME}>
           <Logo />
@@ -18,19 +22,19 @@ export default function Header() {
       </Navbar.Brand>
       <Navbar.Content>
         <Navbar.Item hideIn='xs'>
-          <Navbar.Link color="inherit" href={ROUTES.HOME + '#liveIPO'}>
-            <Text>Live IPOs</Text>
-          </Navbar.Link>
+          <Link href={ROUTES.HOME + '#liveIPO'} className='lg:px-10'>
+            <Text css={{fontWeight: 600}}>Live IPOs</Text>
+          </Link>
         </Navbar.Item>
         <Navbar.Item hideIn='xs'>
-          <Button auto flat as={Link} href={ROUTES.HOME + '#listedIPO'} css={{scrollBehavior: 'smooth'}}>
-            <Text>Listed IPOs</Text>
-          </Button>
+          <Link href={ROUTES.HOME + '#listedIPO'} className='lg:px-10'>
+            <Text css={{fontWeight: 600}}>Listed IPOs</Text>
+          </Link>
         </Navbar.Item>
         <Navbar.Item hideIn='xs'>
-          <Button auto flat as={Link} href={ROUTES.HOME + '#faqs'} css={{scrollBehavior: 'smooth'}}>
-            <Text>FAQs</Text>
-          </Button>
+          <Link href={ROUTES.HOME + '#faq'} className='lg:px-10'>
+            <Text css={{fontWeight: 600}}>FAQs</Text>
+          </Link>
         </Navbar.Item>
         <Navbar.Item hideIn='xs'>
           <ThemeSwitch />
@@ -61,7 +65,7 @@ export default function Header() {
           </Link>
         </Navbar.CollapseItem>
       </Navbar.Collapse>
-    </Navbar>
+    </Navbar >
   )
 }
 

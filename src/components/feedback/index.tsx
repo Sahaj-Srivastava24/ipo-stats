@@ -50,7 +50,7 @@ export default function Feedback() {
     py: "10px",
     h: "50px",
     color: "$accents7 !important",
-    bgColor: 'rgba(11,0,255,0.5) !important',
+    bgColor: '#857fff !important',
     zIndex: 3,
   };
 

@@ -29,13 +29,13 @@ type TCompanyFinancials = {
     columns: string[];
     records: {
       "As at": string;
-      "Total Non-Current Assets"?: string;
-      "Total Current Assets"?: string;
+      "Total Non-Current Assets": string;
+      "Total Current Assets": string;
       "Total Assets": string;
-      "Total Equity"?: string;
-      "Total Non-Current Liabilities"?: string;
-      "Total Current Liabilities"?: string;
-      "Total Liabilities"?: string;
+      "Total Equity": string;
+      "Total Non-Current Liabilities": string;
+      "Total Current Liabilities": string;
+      "Total Liabilities": string;
       "Total Equity and Liabilities": string;
     }[];
   };
@@ -662,7 +662,7 @@ purchases by such customers will have a material adverse impact on our business.
       `The geographical concentration of our exports to certain countries and the inability to operate and grow our business
 in such countries may have a material adverse effect on our business, financial condition, results of operations, cash
 flows and future business prospects.`,
-      `Our business could be adversely affected by volatility in the price or availability of raw materials and components.`
+      `Our business could be adversely affected by volatility in the price or availability of raw materials and components.`,
     ],
     image: imageMappings.logoDigvi,
     value: "In ₹ millions",
@@ -838,7 +838,7 @@ existing arrangements could adversely affect our business and results of operati
       `We do not have long-term agreements with our suppliers for raw materials and an inability to
 procure the desired quality, quantity of our raw materials in a timely manner and at reasonable
 costs, or at all, may have a negative impact on our business, results of operations, financial
-condition and cash flows.`
+condition and cash flows.`,
     ],
     image: imageMappings.logoGlobalSurface,
     value: "In ₹ millions",
@@ -1020,7 +1020,7 @@ growth. The loss of their services may have a material adverse effect on our bus
 and results of operations.`,
       `We derive a significant portion of our revenues from a limited number of clients. The loss of any significant
 clients may have an adverse effect on our business, financial condition, results of operations, and
-prospects.`
+prospects.`,
     ],
     image: imageMappings.logoUdayshivakumar,
     value: "In lakhs",
@@ -1060,17 +1060,35 @@ prospects.`
         records: [
           {
             "As at": "March 31, 2022",
-            "Total Assets": "16,261.25",
-            "Total Equity and Liabilities": "16,261.25",
+            "Total Non-Current Assets": "9,580.33",
+            "Total Current Assets": "6680.93",
+            "Total Assets": "16,261.26",
+            "Total Equity": "6,832.14",
+            "Total Non-Current Liabilities": "3217.9",
+            "Total Current Liabilities": "6,211.22",
+            "Total Liabilities": "9,429.12",
+            "Total Equity and Liabilities": "16,261.26",
           },
           {
             "As at": "March 31, 2021",
+            "Total Non-Current Assets": "7,870.62",
+            "Total Current Assets": "6811.11",
             "Total Assets": "14,681.73",
+            "Total Equity": "5,618.04",
+            "Total Non-Current Liabilities": "2529.63",
+            "Total Current Liabilities": "6,534.07",
+            "Total Liabilities": "9,063.7",
             "Total Equity and Liabilities": "14,681.73",
           },
           {
             "As at": "March 31, 2020",
+            "Total Non-Current Assets": "7,904.33",
+            "Total Current Assets": "7,921.75",
             "Total Assets": "15,826.08",
+            "Total Equity": "4,686.51",
+            "Total Non-Current Liabilities": "3,940.75",
+            "Total Current Liabilities": "7198.83",
+            "Total Liabilities": "11,139.58",
             "Total Equity and Liabilities": "15,826.08",
           },
         ],

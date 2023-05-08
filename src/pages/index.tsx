@@ -7,6 +7,7 @@ import IPOList from "components/views/ipo_list";
 import FAQs from "components/views/faq";
 import Footer from "components/components/footer";
 import Feedback from "components/components/feedback";
+import Header from "components/components/header";
 
 const poppins = Poppins({
   weight: ['400', '500', '700', '900'],
@@ -23,6 +24,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={`${poppins.className} font-[500] bg-backgroundLight`}>
+        <Header />
         <LandingView />
         <IPOList />
         <FAQs />

@@ -12,7 +12,6 @@ const dm_sans = DM_Sans({
 export default function LandingView() {
   return (
     <div className="pb-[40px] md:pb-[100px]">
-      <Header />
       <div className="mt-20 md:mt-[50px] landing:mt-[100px] mx-40 landing:mx-[100px] flex flex-col-reverse md:flex-row gap-[40px] justify-between">
         <div className="flex flex-col gap-[30px] justify-around">
           <div className="flex flex-col gap-[10px]">

@@ -13,7 +13,7 @@ const dm_sans = DM_Sans({
 
 // eslint-disable-next-line 
 export default function IPOCardWrapper(props: {heading: string, subheading: string, ipos: IPO[]}) {
-  const wrapperCls = props.ipos.length < 3 ? 'flex mx-30 navLogo:justify-center md:mx-[80px] lg:mx-[140px]' : 'grid md:grid-cols-2 lg:grid-cols-3 gap-[25px] mx-30 md:mx-[80px] lg:mx-[140px]'
+  const wrapperCls = props.ipos.length < 3 ? 'flex mx-30 navLogo:justify-center md:mx-[80px] lg:mx-[140px]' : 'grid md:grid-cols-3 gap-[25px] mx-30 md:mx-[80px] lg:mx-[140px]'
   const innerCls = props.ipos.length < 3 ? '' : ''
 
   const [showButton, setButton] = useState(props.ipos.length > 3)

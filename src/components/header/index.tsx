@@ -1,10 +1,8 @@
-"use client"
-
 import Logo from "components/components/logo";
 import ThemeSwitch from "components/components/theme_switch";
 import ROUTES from "components/entities/routes";
 import Link from "next/link";
-import {Navbar, Button, Text} from "@nextui-org/react";
+import {Navbar, Text} from "@nextui-org/react";
 
 
 export default function Header() {
@@ -50,17 +48,17 @@ export default function Header() {
       </Navbar.Content>
       <Navbar.Collapse>
         <Navbar.CollapseItem css={{display: 'flex', justifyContent: 'center'}}>
-          <Link color="inherit" href="#">
+          <Link color="inherit" href={ROUTES.HOME + '#liveIPO'}>
             <Text>Live IPOs</Text>
           </Link>
         </Navbar.CollapseItem>
         <Navbar.CollapseItem css={{display: 'flex', justifyContent: 'center'}}>
-          <Link color="inherit" href="#">
+          <Link color="inherit" href={ROUTES.HOME + '#listedIPO'} >
             <Text>Listed IPOs</Text>
           </Link>
         </Navbar.CollapseItem>
         <Navbar.CollapseItem css={{display: 'flex', justifyContent: 'center'}}>
-          <Link color="inherit" href="#">
+          <Link color="inherit" href={ROUTES.HOME + '#faq'}>
             <Text>Frequency Asked Questions</Text>
           </Link>
         </Navbar.CollapseItem>

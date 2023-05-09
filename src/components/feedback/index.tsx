@@ -1,6 +1,8 @@
+/* eslint-disable @typescript-eslint/no-misused-promises*/
+
 import {Button, type CSS, Input, Modal, Radio, Text} from "@nextui-org/react";
 import {DM_Sans, Poppins} from "next/font/google";
-import {useState} from "react";
+import {type FormEvent, useState} from "react";
 
 const dm_sans = DM_Sans({
   weight: "700",
@@ -26,14 +28,28 @@ export default function Feedback() {
     console.log("closed");
   };
 
-  // const handleSubmit = async () => {
-  //   const feedback = { name, mail, radioOne, radioTwo, radioThree, feed };
-  //   const postRes = await fetch("/api/feedback", {
-  //     method: "POST",
-  //     body: JSON.stringify({ feedback }),
-  //   });
-  //   console.log(postRes.json());
-  // };
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault()
+
+    const feedback = {name, mail, radioOne, radioTwo, radioThree, feed};
+    console.log(feedback)
+    const postRes = await fetch("/api/feedback", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(feedback),
+    });
+
+    console.log(await postRes.json());
+    setName('')
+    setMail('')
+    setRadioOne('')
+    setRadioTwo('')
+    setRadioThree('')
+    setFeed('')
+    closeHandler()
+  };
 
   const Label = ({text}: {text: string}) => {
     return (
@@ -85,167 +101,138 @@ export default function Feedback() {
         open={visible}
         onClose={closeHandler}
       >
-        <div className="mx-[20px] mb-[50px] mt-40 flex flex-col md:mx-[70px]">
-          <div className="mb-[60px]">
-            <div className="flex flex-col gap-[10px]">
-              <Text
-                className="text-center text-[12px] font-[700] uppercase leading-[12px] md:text-[16px] md:leading-[16px]"
-                css={{color: "$textLight"}}
-              >
-                felt something wrong..?
-              </Text>
-              <Text
-                className={`text-center text-[30px] font-[700] leading-[30px] md:text-[64px] md:leading-[64px] ${dm_sans.className}`}
-                css={{color: "$textDark"}}
-              >
-                Send us a feedback
-              </Text>
-              <div className="mt-10 text-center text-[16px] font-[400] leading-[24px] text-[#777E90]">
-                Let us know how we can improve our services. Please feel free to
-                give your opinion.
+        <form onSubmit={handleSubmit}>
+          <div className="mx-[20px] mb-[50px] mt-40 flex flex-col md:mx-[70px]">
+            <div className="mb-[60px]">
+              <div className="flex flex-col gap-[10px]">
+                <Text
+                  className="text-center text-[12px] font-[700] uppercase leading-[12px] md:text-[16px] md:leading-[16px]"
+                  css={{color: "$textLight"}}
+                >
+                  felt something wrong..?
+                </Text>
+                <Text
+                  className={`text-center text-[30px] font-[700] leading-[30px] md:text-[64px] md:leading-[64px] ${dm_sans.className}`}
+                  css={{color: "$textDark"}}
+                >
+                  Send us a feedback
+                </Text>
+                <div className="mt-10 text-center text-[16px] font-[400] leading-[24px] text-[#777E90]">
+                  Let us know how we can improve our services. Please feel free to
+                  give your opinion.
+                </div>
               </div>
             </div>
-          </div>
-          <div className="mx-[30px] flex flex-col justify-center gap-[25px] text-left">
-            <div className="flex flex-col items-center justify-between gap-[20px] navLogo:flex-row md:grid md:grid-cols-2">
-              <Input
-                clearable
-                underlined
-                label="Name"
-                value={name}
-                placeholder="Enter your name"
-                onChange={(e) => setName(e.target.value)}
-              />
-              <Input
-                type="email"
-                clearable
-                underlined
-                label="Mail"
-                value={mail}
-                placeholder="Enter your mail"
-                onChange={(e) => setMail(e.target.value)}
-              />
+            <div className="mx-[30px] flex flex-col justify-center gap-[25px] text-left">
+              <div className="flex flex-col items-center justify-between gap-[20px] navLogo:flex-row md:grid md:grid-cols-2">
+                <Input
+                  clearable
+                  underlined
+                  label="Name"
+                  value={name}
+                  type="text"
+                  name="name"
+                  placeholder="Enter your name"
+                  onChange={(e) => setName(e.target.value)}
+                />
+                <Input
+                  type="email"
+                  clearable
+                  underlined
+                  label="Mail"
+                  value={mail}
+                  name="mail"
+                  placeholder="Enter your mail"
+                  onChange={(e) => setMail(e.target.value)}
+                />
+              </div>
+              <div className="flex gap-[20px]">
+                <Radio.Group
+                  size="sm"
+                  value={radioOne}
+                  name="questionOne"
+                  orientation="horizontal"
+                  onChange={(e) => setRadioOne(e)}
+                  label={
+                    <Label text="Was the information on the website helpful in understanding the IPO process?" />
+                  }
+                >
+                  <Radio value="true" color="secondary">
+                    Yes
+                  </Radio>
+                  <Radio value="false" color="secondary">
+                    No
+                  </Radio>
+                </Radio.Group>
+              </div>
+              <div className="flex gap-[20px]">
+                <Radio.Group
+                  size="sm"
+                  name="questionTwo"
+                  value={radioTwo}
+                  orientation="horizontal"
+                  onChange={(e) => setRadioTwo(e)}
+                  label={
+                    <Label text="Did you find the website's design appealing and user-friendly?" />
+                  }
+                >
+                  <Radio value="true" color="secondary">
+                    Yes
+                  </Radio>
+                  <Radio value="false" color="secondary">
+                    No
+                  </Radio>
+                </Radio.Group>
+              </div>
+              <div className="flex gap-[20px]">
+                <Radio.Group
+                  size="sm"
+                  value={radioThree}
+                  name="questionThree"
+                  orientation="horizontal"
+                  onChange={(e) => setRadioThree(e)}
+                  label={
+                    <Label text="Were you able to easily find the details of the current and upcoming IPOs on the website?" />
+                  }
+                >
+                  <Radio type="radio" value="true" color="secondary">
+                    Yes
+                  </Radio>
+                  <Radio value="false" color="secondary">
+                    No
+                  </Radio>
+                </Radio.Group>
+              </div>
+              <div className="flex gap-[20px]">
+                <Input
+                  clearable
+                  underlined
+                  value={feed}
+                  type="text"
+                  name="feedback"
+                  onChange={(e) => setFeed(e.target.value)}
+                  placeholder="Tell us about your experience"
+                  label="Could you please share your overall feedback about the IPO website?"
+                  css={{w: "100%"}}
+                />
+              </div>
             </div>
-            <div className="flex gap-[20px]">
-              <Radio.Group
-                size="sm"
-                value={radioOne}
-                orientation="horizontal"
-                onChange={(e) => setRadioOne(e)}
-                label={
-                  <Label text="Was the information on the website helpful in understanding the IPO process?" />
-                }
+            <div className="mt-40 flex justify-center">
+              {/* eslint-disable-next-line  */}
+              <Button
+                type="submit"
+                // onPress={handleSubmit}
+                css={{
+                  backgroundColor: "#3772FF !important",
+                  borderRadius: "80px",
+                }}
               >
-                <Radio value="yes" color="secondary">
-                  Yes
-                </Radio>
-                <Radio value="no" color="secondary">
-                  No
-                </Radio>
-              </Radio.Group>
-            </div>
-            <div className="flex gap-[20px]">
-              <Radio.Group
-                size="sm"
-                value={radioTwo}
-                orientation="horizontal"
-                onChange={(e) => setRadioTwo(e)}
-                label={
-                  <Label text="Did you find the website's design appealing and user-friendly?" />
-                }
-              >
-                <Radio value="yes" color="secondary">
-                  Yes
-                </Radio>
-                <Radio value="no" color="secondary">
-                  No
-                </Radio>
-              </Radio.Group>
-            </div>
-            <div className="flex gap-[20px]">
-              <Radio.Group
-                size="sm"
-                value={radioThree}
-                orientation="horizontal"
-                onChange={(e) => setRadioThree(e)}
-                label={
-                  <Label text="Were you able to easily find the details of the current and upcoming IPOs on the website?" />
-                }
-              >
-                <Radio value="yes" color="secondary">
-                  Yes
-                </Radio>
-                <Radio value="no" color="secondary">
-                  No
-                </Radio>
-              </Radio.Group>
-            </div>
-            <div className="flex gap-[20px]">
-              <Input
-                clearable
-                underlined
-                value={feed}
-                onChange={(e) => setFeed(e.target.value)}
-                placeholder="Tell us about your experience"
-                label="Could you please share your overall feedback about the IPO website?"
-                css={{w: "100%"}}
-              />
+                Send feedback
+              </Button>
             </div>
           </div>
-          <div className="mt-40 flex justify-center">
-            {/* eslint-disable-next-line  */}
-            <Button
-              css={{
-                backgroundColor: "#3772FF !important",
-                borderRadius: "80px",
-              }}
-            >
-              Send feedback
-            </Button>
-          </div>
-        </div>
-        {/* <Modal.Header>
-        <Text id="modal-title" size={18}>
-          Welcome to
-          <Text b size={18}>
-            NextUI
-          </Text>
-        </Text>
-      </Modal.Header>
-      <Modal.Body>
-        <Input
-          clearable
-          bordered
-          fullWidth
-          color="primary"
-          size="lg"
-          placeholder="Email"
-          contentLeft={<Mail fill="currentColor" />}
-        />
-        <Input
-          clearable
-          bordered
-          fullWidth
-          color="primary"
-          size="lg"
-          placeholder="Password"
-          contentLeft={<Password fill="currentColor" />}
-        />
-        <Row justify="space-between">
-          <Checkbox>
-            <Text size={14}>Remember me</Text>
-          </Checkbox>
-          <Text size={14}>Forgot password?</Text>
-        </Row>
-      </Modal.Body>
-      <Modal.Footer>
-        <Button auto flat color="error" onPress={closeHandler}>
-          Close
-        </Button>
-        <Button auto onPress={closeHandler}>
-          Sign in
-        </Button>
-      </Modal.Footer> */}
+        </form>
+
       </Modal>
     </>
   );
